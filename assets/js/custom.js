@@ -1,14 +1,66 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // jQuery
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var mapStyles = [ {"featureType":"road","elementType":"labels","stylers":[{"visibility":"simplified"},{"lightness":20}]},{"featureType":"administrative.land_parcel","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"all","stylers":[{"saturation":-100},{"visibility":"on"},{"lightness":10}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":50}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#a1cdfc"},{"saturation":30},{"lightness":49}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#f49935"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#fad959"}]}, {featureType:'road.highway',elementType:'all',stylers:[{hue:'#dddbd7'},{saturation:-92},{lightness:60},{visibility:'on'}]}, {featureType:'landscape.natural',elementType:'all',stylers:[{hue:'#c8c6c3'},{saturation:-71},{lightness:-18},{visibility:'on'}]},  {featureType:'poi',elementType:'all',stylers:[{hue:'#d9d5cd'},{saturation:-70},{lightness:20},{visibility:'on'}]} ];
+var mapStyles = [{
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [{"visibility": "simplified"}, {"lightness": 20}]
+}, {
+    "featureType": "administrative.land_parcel",
+    "elementType": "all",
+    "stylers": [{"visibility": "off"}]
+}, {
+    "featureType": "landscape.man_made",
+    "elementType": "all",
+    "stylers": [{"visibility": "on"}]
+}, {
+    "featureType": "transit",
+    "elementType": "all",
+    "stylers": [{"saturation": -100}, {"visibility": "on"}, {"lightness": 10}]
+}, {"featureType": "road.local", "elementType": "all", "stylers": [{"visibility": "on"}]}, {
+    "featureType": "road.local",
+    "elementType": "all",
+    "stylers": [{"visibility": "on"}]
+}, {
+    "featureType": "road.highway",
+    "elementType": "labels",
+    "stylers": [{"visibility": "simplified"}]
+}, {"featureType": "poi", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {
+    "featureType": "road.arterial",
+    "elementType": "labels",
+    "stylers": [{"visibility": "on"}, {"lightness": 50}]
+}, {
+    "featureType": "water",
+    "elementType": "all",
+    "stylers": [{"hue": "#a1cdfc"}, {"saturation": 30}, {"lightness": 49}]
+}, {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [{"hue": "#f49935"}]
+}, {
+    "featureType": "road.arterial",
+    "elementType": "geometry",
+    "stylers": [{"hue": "#fad959"}]
+}, {
+    featureType: 'road.highway',
+    elementType: 'all',
+    stylers: [{hue: '#dddbd7'}, {saturation: -92}, {lightness: 60}, {visibility: 'on'}]
+}, {
+    featureType: 'landscape.natural',
+    elementType: 'all',
+    stylers: [{hue: '#c8c6c3'}, {saturation: -71}, {lightness: -18}, {visibility: 'on'}]
+}, {
+    featureType: 'poi',
+    elementType: 'all',
+    stylers: [{hue: '#d9d5cd'}, {saturation: -70}, {lightness: 20}, {visibility: 'on'}]
+}];
 var $ = jQuery.noConflict();
-$(document).ready(function($) {
+$(document).ready(function ($) {
     "use strict";
 
-    if( $('body').hasClass('navigation-fixed') ){
-        $('.off-canvas-navigation').css( 'top', - $('.header').height() );
-        $('#page-canvas').css( 'margin-top',$('.header').height() );
+    if ($('body').hasClass('navigation-fixed')) {
+        $('.off-canvas-navigation').css('top', -$('.header').height());
+        $('#page-canvas').css('margin-top', $('.header').height());
     }
 
     rating();
@@ -17,7 +69,7 @@ $(document).ready(function($) {
 
     adaptBackgroundHeight();
 
-    $('.quick-view, .results .item').live('click',  function(){
+    $('.quick-view, .results .item').live('click', function () {
         var id = $(this).attr('id');
         quickView(id);
         return false;
@@ -25,9 +77,9 @@ $(document).ready(function($) {
 
     // Scrollbar on "Results" section
 
-    if( $('.items-list').length > 0 ){
+    if ($('.items-list').length > 0) {
         $(".items-list").mCustomScrollbar({
-            mouseWheel:{ scrollAmount: 350 }
+            mouseWheel: {scrollAmount: 350}
         });
     }
 
@@ -36,14 +88,14 @@ $(document).ready(function($) {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
-    $('.off-canvas-navigation header').css( 'line-height', $('.header').height() + 'px' );
+    $('.off-canvas-navigation header').css('line-height', $('.header').height() + 'px');
 
     // Date & Time picker
 
-    if( $('.input-group.date').length > 0 ){
-        $('.input-group.date').datepicker({ });
+    if ($('.input-group.date').length > 0) {
+        $('.input-group.date').datepicker({});
     }
-    if( $('.input-daterange').length > 0 ){
+    if ($('.input-daterange').length > 0) {
         $('.input-daterange').datepicker({
             todayHighlight: true
         });
@@ -52,7 +104,7 @@ $(document).ready(function($) {
 //  Bootstrap Select ---------------------------------------------------------------------------------------------------
 
     var select = $('select');
-    if (select.length > 0 ){
+    if (select.length > 0) {
         select.selectpicker();
     }
     var bootstrapSelect = $('.bootstrap-select');
@@ -68,34 +120,34 @@ $(document).ready(function($) {
     bootstrapSelect.on('hidden.bs.dropdown', function () {
         var _this = $(this);
         $(_this).addClass('open');
-        setTimeout(function() {
+        setTimeout(function () {
             $(_this).removeClass('open');
         }, 100);
     });
 
 //  Expand content on click --------------------------------------------------------------------------------------------
 
-    $('.expand-content').live('click',  function(e){
+    $('.expand-content').live('click', function (e) {
         e.preventDefault();
         var children = $(this).attr('data-expand');
         var parentHeight = $(this).closest('.expandable-content').height();
-        var contentSize = $( children + ' .content' ).height();
-        $( children ).toggleClass('collapsed');
-        $( this ).toggleClass('active');
-        $( children ).css( 'height' , contentSize );
-        if( !$( children).hasClass('collapsed') ){
-            setTimeout(function() {
-                $( children ).css('overflow', 'visible');
+        var contentSize = $(children + ' .content').height();
+        $(children).toggleClass('collapsed');
+        $(this).toggleClass('active');
+        $(children).css('height', contentSize);
+        if (!$(children).hasClass('collapsed')) {
+            setTimeout(function () {
+                $(children).css('overflow', 'visible');
             }, 400);
         }
         else {
-            $( children ).css('overflow', 'hidden');
+            $(children).css('overflow', 'hidden');
         }
-        $('.has-child').live('click',  function(e){
+        $('.has-child').live('click', function (e) {
             var parent = $(this).closest('.expandable-content');
-            var childHeight = $( $(this).attr('data-expand') + ' .content').height();
-            if( $(this).hasClass('active') ){
-                $(parent).height( parent.height() + childHeight )
+            var childHeight = $($(this).attr('data-expand') + ' .content').height();
+            if ($(this).hasClass('active')) {
+                $(parent).height(parent.height() + childHeight)
             }
             else {
                 $(parent).height(parentHeight);
@@ -105,7 +157,7 @@ $(document).ready(function($) {
 
 // Set width for inputs in horizontal search bar -----------------------------------------------------------------------
 
-    $( "#redefine-search-form" ).load( "assets/external/_search-bar.html", function() {
+    $("#redefine-search-form").load("assets/external/search-bar.html", function () {
         setInputsWidth();
         //autoComplete();
     });
@@ -116,28 +168,28 @@ $(document).ready(function($) {
 
 // Keyboard Shortcuts --------------------------------------------------------------------------------------------------
 
-    $(document).bind('keypress', 'F', function(){
+    $(document).bind('keypress', 'F', function () {
         $('.redefine-search .expand-content').trigger('click');
-        if( !$('.search-bar').hasClass('collapsed') ){
-            setTimeout(function() {
+        if (!$('.search-bar').hasClass('collapsed')) {
+            setTimeout(function () {
                 $('.search-bar input').first().focus();
             }, 200);
         }
         return false;
     });
 
-    $(document).bind('keypress', 'M', function(){
+    $(document).bind('keypress', 'M', function () {
         $('.header .toggle-navigation').trigger('click');
         return false;
     });
 
-    $(document).bind('keypress', '+', function(){
+    $(document).bind('keypress', '+', function () {
         $('.header .submit-item').trigger('click');
         return false;
     });
 
-    $(document).keydown(function(e) {
-        switch(e.which) {
+    $(document).keydown(function (e) {
+        switch (e.which) {
             case 37: // left
                 $('.item-slider').trigger('prev.owl.carousel');
                 break;
@@ -152,7 +204,7 @@ $(document).ready(function($) {
 
 //  Smooth Navigation Scrolling ----------------------------------------------------------------------------------------
 
-    $('.navigation .nav a[href^="#"], a[href^="#"].roll').on('click',function (e) {
+    $('.navigation .nav a[href^="#"], a[href^="#"].roll').on('click', function (e) {
         e.preventDefault();
         var target = this.hash,
             $target = $(target);
@@ -166,7 +218,7 @@ $(document).ready(function($) {
             }, 2000)
         }
         return false;
-    });	
+    });
 
 //  iCheck -------------------------------------------------------------------------------------------------------------
 
@@ -183,23 +235,23 @@ $(document).ready(function($) {
     $('a').on('click', function (e) {
         var attr = $(this).attr('href');
         //alert( $(this).attr('href') );
-        if ( attr.indexOf('#') != 0 ) {
+        if (attr.indexOf('#') != 0) {
             e.preventDefault();
             var goTo = this.getAttribute("href");
             $('body').removeClass('page-fade-in');
             $('body').addClass('page-fade-out');
-            setTimeout(function(){
+            setTimeout(function () {
                 window.location = goTo;
-            },200);
+            }, 200);
         }
-        else if ( $(this).attr('href') == '#' ) {
+        else if ($(this).attr('href') == '#') {
             e.preventDefault();
         }
     });
 
 //  Dropzone -----------------------------------------------------------------------------------------------------------
 
-    if( $('.dropzone').length > 0 ) {
+    if ($('.dropzone').length > 0) {
         Dropzone.autoDiscover = false;
         $("#file-submit").dropzone({
             url: "upload",
@@ -214,37 +266,37 @@ $(document).ready(function($) {
 
 //  Timepicker ---------------------------------------------------------------------------------------------------------
 
-    if( $('.oh-timepicker').length > 0 ) {
+    if ($('.oh-timepicker').length > 0) {
         $('.oh-timepicker').timepicker();
     }
 
-    $('.item .quick-view').on('click',function (e) {
+    $('.item .quick-view').on('click', function (e) {
         e.preventDefault();
     });
 
 //  Items scripts ------------------------------------------------------------------------------------------------------
 
-    $('.item.admin-view .hide-item').on('click',function (e) {
+    $('.item.admin-view .hide-item').on('click', function (e) {
         $(this).closest('.item').toggleClass('is-hidden');
     });
 
 //  No UI Slider -------------------------------------------------------------------------------------------------------
 
-    if( $('.ui-slider').length > 0 ){
-        $('.ui-slider').each(function(){
+    if ($('.ui-slider').length > 0) {
+        $('.ui-slider').each(function () {
             var step;
-            if( $(this).attr('data-step') ) {
-                step = parseInt( $(this).attr('data-step') );
+            if ($(this).attr('data-step')) {
+                step = parseInt($(this).attr('data-step'));
             }
             else {
                 step = 10;
             }
             var sliderElement = $(this).attr('id');
-            var element = $( '#' + sliderElement);
-            var valueMin = parseInt( $(this).attr('data-value-min') );
-            var valueMax = parseInt( $(this).attr('data-value-max') );
+            var element = $('#' + sliderElement);
+            var valueMin = parseInt($(this).attr('data-value-min'));
+            var valueMax = parseInt($(this).attr('data-value-max'));
             $(this).noUiSlider({
-                start: [ valueMin, valueMax ],
+                start: [valueMin, valueMax],
                 connect: true,
                 range: {
                     'min': valueMin,
@@ -252,19 +304,35 @@ $(document).ready(function($) {
                 },
                 step: step
             });
-            if( $(this).attr('data-value-type') == 'price' ) {
-                if( $(this).attr('data-currency-placement') == 'before' ) {
-                    $(this).Link('lower').to( $(this).children('.values').children('.value-min'), null, wNumb({ prefix: $(this).attr('data-currency'), decimals: 0, thousand: '.' }));
-                    $(this).Link('upper').to( $(this).children('.values').children('.value-max'), null, wNumb({ prefix: $(this).attr('data-currency'), decimals: 0, thousand: '.' }));
+            if ($(this).attr('data-value-type') == 'price') {
+                if ($(this).attr('data-currency-placement') == 'before') {
+                    $(this).Link('lower').to($(this).children('.values').children('.value-min'), null, wNumb({
+                        prefix: $(this).attr('data-currency'),
+                        decimals: 0,
+                        thousand: '.'
+                    }));
+                    $(this).Link('upper').to($(this).children('.values').children('.value-max'), null, wNumb({
+                        prefix: $(this).attr('data-currency'),
+                        decimals: 0,
+                        thousand: '.'
+                    }));
                 }
-                else if( $(this).attr('data-currency-placement') == 'after' ){
-                    $(this).Link('lower').to( $(this).children('.values').children('.value-min'), null, wNumb({ postfix: $(this).attr('data-currency'), decimals: 0, thousand: ' ' }));
-                    $(this).Link('upper').to( $(this).children('.values').children('.value-max'), null, wNumb({ postfix: $(this).attr('data-currency'), decimals: 0, thousand: ' ' }));
+                else if ($(this).attr('data-currency-placement') == 'after') {
+                    $(this).Link('lower').to($(this).children('.values').children('.value-min'), null, wNumb({
+                        postfix: $(this).attr('data-currency'),
+                        decimals: 0,
+                        thousand: ' '
+                    }));
+                    $(this).Link('upper').to($(this).children('.values').children('.value-max'), null, wNumb({
+                        postfix: $(this).attr('data-currency'),
+                        decimals: 0,
+                        thousand: ' '
+                    }));
                 }
             }
             else {
-                $(this).Link('lower').to( $(this).children('.values').children('.value-min'), null, wNumb({ decimals: 0 }));
-                $(this).Link('upper').to( $(this).children('.values').children('.value-max'), null, wNumb({ decimals: 0 }));
+                $(this).Link('lower').to($(this).children('.values').children('.value-min'), null, wNumb({decimals: 0}));
+                $(this).Link('upper').to($(this).children('.values').children('.value-max'), null, wNumb({decimals: 0}));
             }
         });
     }
@@ -275,53 +343,53 @@ $(document).ready(function($) {
 // On Load
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-$(window).load(function(){
+$(window).load(function () {
     var $equalHeight = $('.equal-height');
-    for( var i=0; i<$equalHeight.length; i++ ){
-        equalHeight( $equalHeight );
-    }	
+    for (var i = 0; i < $equalHeight.length; i++) {
+        equalHeight($equalHeight);
+    }
 });
 
-$(window).resize(function(){
+$(window).resize(function () {
     adaptBackgroundHeight();
     var $equalHeight = $('.equal-height');
-    for( var i=0; i<$equalHeight.length; i++ ){
-        equalHeight( $equalHeight );
+    for (var i = 0; i < $equalHeight.length; i++) {
+        equalHeight($equalHeight);
     }
 });
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Functions
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function setInputsWidth(){
+function setInputsWidth() {
     var $inputRow = $('.search-bar.horizontal .input-row');
-    for( var i=0; i<$inputRow.length; i++ ){
-        if( $inputRow.find( $('button[type="submit"]') ).length ){
-            $inputRow.find('.form-group:last').css('width','initial');
+    for (var i = 0; i < $inputRow.length; i++) {
+        if ($inputRow.find($('button[type="submit"]')).length) {
+            $inputRow.find('.form-group:last').css('width', 'initial');
         }
     }
 
-    var searchBar =  $('.search-bar.horizontal .form-group');
-    for( var a=0; a<searchBar.length; a++ ){
-        if( searchBar.length <= ( 1 + 1 ) ){
+    var searchBar = $('.search-bar.horizontal .form-group');
+    for (var a = 0; a < searchBar.length; a++) {
+        if (searchBar.length <= ( 1 + 1 )) {
             $('.main-search').addClass('inputs-1');
         }
-        else if( searchBar.length <= ( 2 + 1 ) ){
+        else if (searchBar.length <= ( 2 + 1 )) {
             $('.main-search').addClass('inputs-2');
         }
-        else if( searchBar.length <= ( 3 + 1 ) ){
+        else if (searchBar.length <= ( 3 + 1 )) {
             $('.main-search').addClass('inputs-3');
         }
-        else if( searchBar.length <= ( 4 + 1 ) ){
+        else if (searchBar.length <= ( 4 + 1 )) {
             $('.main-search').addClass('inputs-4');
         }
-        else if( searchBar.length <= ( 5 + 1 ) ){
+        else if (searchBar.length <= ( 5 + 1 )) {
             $('.main-search').addClass('inputs-5');
         }
         else {
             $('.main-search').addClass('inputs-4');
         }
-        if( $('.search-bar.horizontal .form-group label').length > 0 ){
+        if ($('.search-bar.horizontal .form-group label').length > 0) {
             $('.search-bar.horizontal .form-group:last-child button').css('margin-top', 25)
         }
     }
@@ -329,13 +397,13 @@ function setInputsWidth(){
 
 // Autocomplete address ------------------------------------------------------------------------------------------------
 
-function autoComplete(){
-    if( !$("script[src='assets/js/leaflet.js']").length ){
-        var input = document.getElementById('location') ;
+function autoComplete() {
+    if (!$("script[src='assets/js/leaflet.js']").length) {
+        var input = document.getElementById('location');
         var autocomplete = new google.maps.places.Autocomplete(input, {
             types: ["geocode"]
         });
-        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
             var place = autocomplete.getPlace();
             if (!place.geometry) {
                 return;
@@ -355,48 +423,50 @@ function autoComplete(){
 
 // Rating --------------------------------------------------------------------------------------------------------------
 
-function rating(element){
+function rating(element) {
     var ratingElement =
-        '<span class="stars">'+
-            '<i class="fa fa-star s1" data-score="1"></i>'+
-            '<i class="fa fa-star s2" data-score="2"></i>'+
-            '<i class="fa fa-star s3" data-score="3"></i>'+
-            '<i class="fa fa-star s4" data-score="4"></i>'+
-            '<i class="fa fa-star s5" data-score="5"></i>'+
-        '</span>'
-    ;
-    if( !element ) { element = ''; }
-    $.each( $(element + ' .rating'), function(i) {
+            '<span class="stars">' +
+            '<i class="fa fa-star s1" data-score="1"></i>' +
+            '<i class="fa fa-star s2" data-score="2"></i>' +
+            '<i class="fa fa-star s3" data-score="3"></i>' +
+            '<i class="fa fa-star s4" data-score="4"></i>' +
+            '<i class="fa fa-star s5" data-score="5"></i>' +
+            '</span>'
+        ;
+    if (!element) {
+        element = '';
+    }
+    $.each($(element + ' .rating'), function (i) {
         $(this).append(ratingElement);
-        if( $(this).hasClass('active') ){
-            $(this).append('<input readonly hidden="" name="score_' + $(this).attr('data-name') +'" id="score_' + $(this).attr('data-name') +'">');
+        if ($(this).hasClass('active')) {
+            $(this).append('<input readonly hidden="" name="score_' + $(this).attr('data-name') + '" id="score_' + $(this).attr('data-name') + '">');
         }
         var rating = $(this).attr('data-rating');
-        for( var e = 0; e < rating; e++ ){
-            var rate = e+1;
-            $(this).children('.stars').children( '.s' + rate ).addClass('active');
+        for (var e = 0; e < rating; e++) {
+            var rate = e + 1;
+            $(this).children('.stars').children('.s' + rate).addClass('active');
         }
     });
 
     var ratingActive = $('.rating.active i');
-    ratingActive.on('hover',function(){
-        for( var i=0; i<$(this).attr('data-score'); i++ ){
-            var a = i+1;
-            $(this).parent().children('.s'+a).addClass('hover');
-        }
-    },
-    function(){
-        for( var i=0; i<$(this).attr('data-score'); i++ ){
-            var a = i+1;
-            $(this).parent().children('.s'+a).removeClass('hover');
-        }
-    });
-    ratingActive.on('click', function(){
-        $(this).parent().parent().children('input').val( $(this).attr('data-score') );
+    ratingActive.on('hover', function () {
+            for (var i = 0; i < $(this).attr('data-score'); i++) {
+                var a = i + 1;
+                $(this).parent().children('.s' + a).addClass('hover');
+            }
+        },
+        function () {
+            for (var i = 0; i < $(this).attr('data-score'); i++) {
+                var a = i + 1;
+                $(this).parent().children('.s' + a).removeClass('hover');
+            }
+        });
+    ratingActive.on('click', function () {
+        $(this).parent().parent().children('input').val($(this).attr('data-score'));
         $(this).parent().children('.fa').removeClass('active');
-        for( var i=0; i<$(this).attr('data-score'); i++ ){
-            var a = i+1;
-            $(this).parent().children('.s'+a).addClass('active');
+        for (var i = 0; i < $(this).attr('data-score'); i++) {
+            var a = i + 1;
+            $(this).parent().children('.s' + a).addClass('active');
         }
         return false;
     });
@@ -404,39 +474,39 @@ function rating(element){
 
 // Owl Carousel in Modal Window ----------------------------------------------------------------------------------------
 
-function drawOwlCarousel(_rtl){
-    $.getScript( "assets/js/owl.carousel.min.js", function( data, textStatus, jqxhr ) {
+function drawOwlCarousel(_rtl) {
+    $.getScript("assets/js/owl.carousel.min.js", function (data, textStatus, jqxhr) {
         $(".image .gallery").owlCarousel({
             rtl: _rtl,
             items: 1,
             nav: true,
-            navText: ["",""],
+            navText: ["", ""],
             responsiveBaseElement: ".image"
         });
     });
 }
 
-function lazyLoad(selector){
-    selector.load(function() {
+function lazyLoad(selector) {
+    selector.load(function () {
         $(this).parent().removeClass('loading');
     });
 }
 
 //  Equal heights ------------------------------------------------------------------------------------------------------
 
-function equalHeight(container){
+function equalHeight(container) {
     var currentTallest = 0,
         currentRowStart = 0,
         rowDivs = new Array(),
         $el,
         topPosition = 0;
 
-    $(container).find('.item, .price-box').each(function() {
+    $(container).find('.item, .price-box').each(function () {
         $el = $(this);
         $($el).height('auto');
         topPostion = $el.position().top;
         if (currentRowStart != topPostion) {
-            for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
                 rowDivs[currentDiv].height(currentTallest);
             }
             rowDivs.length = 0; // empty the array
@@ -447,7 +517,7 @@ function equalHeight(container){
             rowDivs.push($el);
             currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
         }
-        for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+        for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
             rowDivs[currentDiv].height(currentTallest);
         }
     });
@@ -455,8 +525,8 @@ function equalHeight(container){
 
 // Initialize Owl carousel ---------------------------------------------------------------------------------------------
 
-function initializeOwl(_rtl){
-    $.getScript( "assets/js/owl.carousel.min.js", function( data, textStatus, jqxhr ) {
+function initializeOwl(_rtl) {
+    $.getScript("assets/js/owl.carousel.min.js", function (data, textStatus, jqxhr) {
         if ($('.owl-carousel').length > 0) {
             if ($('.carousel-full-width').length > 0) {
                 setCarouselWidth();
@@ -466,7 +536,7 @@ function initializeOwl(_rtl){
                 items: 1,
                 responsiveBaseWidth: ".slide",
                 nav: true,
-                navText: ["",""]
+                navText: ["", ""]
             });
             $(".item-slider").owlCarousel({
                 rtl: _rtl,
@@ -476,32 +546,32 @@ function initializeOwl(_rtl){
                 nav: false,
                 callbacks: true,
                 URLhashListener: true,
-                navText: ["",""]
+                navText: ["", ""]
             });
             $(".list-slider").owlCarousel({
                 rtl: _rtl,
                 items: 1,
                 responsiveBaseWidth: ".slide",
                 nav: true,
-                navText: ["",""]
+                navText: ["", ""]
             });
             $(".testimonials").owlCarousel({
                 rtl: _rtl,
                 items: 1,
                 responsiveBaseWidth: "blockquote",
                 nav: true,
-                navText: ["",""]
+                navText: ["", ""]
             });
 
-            $('.item-gallery .thumbnails a').on('click', function(){
-                $('.item-gallery .thumbnails a').each(function(){
+            $('.item-gallery .thumbnails a').on('click', function () {
+                $('.item-gallery .thumbnails a').each(function () {
                     $(this).removeClass('active');
                 });
                 $(this).addClass('active');
             });
-            $('.item-slider').on('translated.owl.carousel', function(event) {
+            $('.item-slider').on('translated.owl.carousel', function (event) {
                 var thumbnailNumber = $('.item-slider .owl-item.active img').attr('data-hash');
-                $( '.item-gallery .thumbnails #thumbnail-' + thumbnailNumber ).trigger('click');
+                $('.item-gallery .thumbnails #thumbnail-' + thumbnailNumber).trigger('click');
             });
             return false;
         }
@@ -510,29 +580,29 @@ function initializeOwl(_rtl){
 
 // Specific data for each item -----------------------------------------------------------------------------------------
 
-function drawItemSpecific(category, json, a){
+function drawItemSpecific(category, json, a) {
     var itemSpecific = '';
-    if( category ){
-        if( category == 'real_estate' ){
-            if( json.data[a].item_specific ){
-                if( json.data[a].item_specific.bedrooms ){
+    if (category) {
+        if (category == 'real_estate') {
+            if (json.data[a].item_specific) {
+                if (json.data[a].item_specific.bedrooms) {
                     itemSpecific += '<span title="Bedrooms"><img src="assets/img/bedrooms.png">' + json.data[a].item_specific.bedrooms + '</span>';
                 }
-                if( json.data[a].item_specific.bathrooms ){
+                if (json.data[a].item_specific.bathrooms) {
                     itemSpecific += '<span title="Bathrooms"><img src="assets/img/bathrooms.png">' + json.data[a].item_specific.bathrooms + '</span>';
                 }
-                if( json.data[a].item_specific.area ){
+                if (json.data[a].item_specific.area) {
                     itemSpecific += '<span title="Area"><img src="assets/img/area.png">' + json.data[a].item_specific.area + '<sup>2</sup></span>';
                 }
-                if( json.data[a].item_specific.garages ){
+                if (json.data[a].item_specific.garages) {
                     itemSpecific += '<span title="Garages"><img src="assets/img/garages.png">' + json.data[a].item_specific.garages + '</span>';
                 }
                 return itemSpecific;
             }
         }
-        else if ( category == 'bar_restaurant' ){
-            if( json.data[a].item_specific ){
-                if( json.data[a].item_specific.menu ){
+        else if (category == 'bar_restaurant') {
+            if (json.data[a].item_specific) {
+                if (json.data[a].item_specific.menu) {
                     itemSpecific += '<span>Menu from: ' + json.data[a].item_specific.menu + '</span>';
                 }
                 return itemSpecific;
@@ -548,10 +618,10 @@ function drawItemSpecific(category, json, a){
 
 // Quick View ----------------------------------------------------------------------------------------------------------
 
-function quickView(id){
+function quickView(id) {
     $.ajax({
         type: 'POST',
-        url: 'assets/external/_modal.html',
+        url: 'assets/external/modal.html',
         data: id,
         success: function (data) {
             // Create HTML element with loaded data
@@ -562,15 +632,14 @@ function quickView(id){
 
 // Adapt background height to block element ----------------------------------------------------------------------------
 
-function adaptBackgroundHeight(){
-    $('.background').each(function(){
-        if( $(this).children('img').height() < $(this).height() ){
+function adaptBackgroundHeight() {
+    $('.background').each(function () {
+        if ($(this).children('img').height() < $(this).height()) {
             //$(this).children('img').css('right', ( $(this).children('img').width()/2 -  $(window).width())/2 );
             $(this).children('img').css('width', 'auto');
             $(this).children('img').css('height', '100%');
         }
     });
-
 
 
 }
