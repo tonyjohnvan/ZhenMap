@@ -90,7 +90,7 @@ $(document).ready(function ($) {
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
-    $('.off-canvas-navigation header').css('line-height', $('.header').height() + 'px');
+//    $('.off-canvas-navigation header').css('line-height', $('.header').height() + 'px');
 
     // Date & Time picker
 

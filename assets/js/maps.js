@@ -60,10 +60,10 @@ var mapStyles = [{
 var $body = $('body');
 if ($body.hasClass('map-fullscreen')) {
     if ($(window).width() > 768) {
-        $('.map-canvas').height($(window).height() - $('.header').height());
+        $('.map-canvas').height($(window).height() - $('.header').height() - 60);
     }
     else {
-        $('.map-canvas #map').height($(window).height() - $('.header').height());
+        $('.map-canvas #map').height($(window).height() - $('.header').height() - 60);
     }
 }
 
@@ -83,9 +83,11 @@ function createHomepageGoogleMap(_latitude, _longitude, json) {
             disableDefaultUI: false,
             scrollwheel: false,
             styles: mapStyles,
+            mapTypeControl: false,
             mapTypeControlOptions: {
                 style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                position: google.maps.ControlPosition.BOTTOM_CENTER
+                position: google.maps.ControlPosition.BOTTOM_CENTER,
+                display: false
             },
             panControl: false,
             zoomControl: true,

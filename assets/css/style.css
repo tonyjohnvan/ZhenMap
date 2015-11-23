@@ -1019,14 +1019,14 @@ ul.bullets li a:hover {
   display: table;
   width: 100%;
 }
-.carousel.wide .slide .inner:active {
+.carousel.wide .slide .inner {
   /*left: 20px;*/
 }
-.carousel.wide .slide .inner:active .image > img {
+.carousel.wide .slide .inner .image > img.clicked {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
   opacity: 0.05;
 }
-.carousel.wide .slide .inner:active .image .item-specific {
+.carousel.wide .slide .inner .image .item-specific.clicked {
   left: 0px;
 }
 .carousel.wide .slide .inner {
@@ -2411,6 +2411,7 @@ ul.bullets li a:hover {
   position: relative;
   text-align: center;
   vertical-align: middle;
+  /*max-width: 100px;*/
 }
 .logos .logo a {
   -moz-transition: 0.3s;
@@ -6012,6 +6013,7 @@ body.navigation-top-header .header .wrapper .toggle-navigation {
   margin-top: 30px;
   padding-top: 50px;
   position: relative;
+  width: 100%;
 }
 #page-footer .inner {
   padding-top: 60px;

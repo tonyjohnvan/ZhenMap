@@ -1,0 +1,29 @@
+#popular{
+    padding: 20px 0 50px 0;
+}
+
+#popular h2{
+    margin-bottom: 15px;
+}
+
+.carousel.wide{
+    margin: 20px 0;
+}
+.guide-small-text{
+    position: absolute;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    color: #676869;
+}
+.off-canvas-navigation header{
+    padding: 15px 15px;
+    color: #c2ba9a;
+}
+
+#partners{
+    padding-bottom: 0px;
+}
