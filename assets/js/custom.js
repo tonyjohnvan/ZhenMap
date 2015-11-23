@@ -63,6 +63,8 @@ $(document).ready(function ($) {
         $('#page-canvas').css('margin-top', $('.header').height());
     }
 
+    $('.map-canvas').toggleClass('results-collapsed');
+
     rating();
 
     setInputsWidth();

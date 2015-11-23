@@ -1019,14 +1019,14 @@ ul.bullets li a:hover {
   display: table;
   width: 100%;
 }
-.carousel.wide .slide .inner:hover {
-  left: 20px;
+.carousel.wide .slide .inner:active {
+  /*left: 20px;*/
 }
-.carousel.wide .slide .inner:hover .image > img {
+.carousel.wide .slide .inner:active .image > img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
   opacity: 0.05;
 }
-.carousel.wide .slide .inner:hover .image .item-specific {
+.carousel.wide .slide .inner:active .image .item-specific {
   left: 0px;
 }
 .carousel.wide .slide .inner {
