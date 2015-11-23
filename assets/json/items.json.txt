@@ -2,62 +2,44 @@
     "data": [
         {
             "id": 1,
-            "category": "real_estate",
-            "title": "Steak House Restaurant",
-            "location": "63 Birch Street",
-            "latitude": 51.541599,
-            "longitude": -0.112588,
+            "category": "bar_restaurant",
+            "title": "OPERA BOMBANA",
+            "location": "9 Dongdaqiao Rd, Chaoyang",
+            "latitude": 39.919524,
+            "longitude": 116.446436,
             "url": "item-detail.html",
-            "type": "Apartment",
-            "type_icon": "assets/icons/store/apparel/umbrella-2.png",
-            "rating": 4,
+            "type": "Restaurant",
+            "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+            "rating": 5,
+            "price": "人均￥600",
             "gallery":
                 [
-                    "assets/img/items/1.jpg",
-                    "assets/img/items/5.jpg",
-                    "assets/img/items/4.jpg"
+                    "assets/img/items/1.jpg"
                 ],
-            "features":
-                [
-                    "Free Parking",
-                    "Cards Accepted",
-                    "Wi-Fi",
-                    "Air Condition",
-                    "Reservations",
-                    "Teambuildings",
-                    "Places to seat"
-                ],
-            "date_created": "2014-11-03",
-            "price": "$2500",
-            "featured": 0,
             "color": "",
-            "person_id": 1,
-            "year": 1980,
-            "special_offer": 0,
             "item_specific":
                 {
-                    "bedrooms": 2,
-                    "bathrooms": 2,
-                    "rooms": 4,
-                    "garages": 1,
-                    "area": 240
-                },
-            "description": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet pellentesque mauris. Proin sit amet scelerisque risus. Donec semper semper erat ut mollis. Curabitur suscipit, justo eu dignissim lacinia, ante sapien pharetra duin consectetur eros augue sed ex. Donec a odio rutrum, hendrerit sapien vitae, euismod arcu.",
-            "last_review": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet",
-            "last_review_rating": 5
+                    "menu": "￥32.00",
+                    "offer1": "黑椒牛排",
+                    "offer1_price": "45.00",
+                    "offer2": "烟熏三文鱼",
+                    "offer2_price": "36。00",
+                    "offer3": "欧式煎蛋",
+                    "offer3_price": "12.00"
+                }
         },
         {
             "id": 2,
             "category": "bar_restaurant",
-            "title": "Blue Chilli",
-            "location": "1882 Trainer Avenue",
-            "latitude": 51.538395,
-            "longitude": -0.097418,
+            "title": "China Grill",
+            "location": "66F, Park Hyatt",
+            "latitude": 39.9089829,
+            "longitude": 116.4562528,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
             "rating": 5,
-            "price": "$120",
+            "price": "人均￥1,200",
             "gallery":
                 [
                     "assets/img/items/2.jpg"
@@ -65,63 +47,98 @@
             "color": "",
             "item_specific":
                 {
-                    "menu": "$6.50",
-                    "offer1": "Chicken wings",
-                    "offer1_price": "4.50",
-                    "offer2": "Mushroom ragout",
-                    "offer2_price": "3.60",
-                    "offer3": "Nice salad with tuna, beans and hard-boiled egg",
-                    "offer3_price": "1.20"
+                    "menu": "￥92.00",
+                    "offer1": "黑椒牛排",
+                    "offer1_price": "45.00",
+                    "offer2": "烟熏三文鱼",
+                    "offer2_price": "36。00",
+                    "offer3": "欧式煎蛋",
+                    "offer3_price": "12.00"
                 }
         },
         {
             "id": 3,
-            "title": "Eddie’s Fast Food",
-            "category": "real_estate",
-            "location": "1882 Trainer Avenue",
-            "latitude": 51.551489,
-            "longitude": -0.067077,
+            "title": "NOBU Beijing",
+            "category": "bar_restaurant",
+            "location": "JW Marriott Hotel 1F",
+            "latitude": 39.9090724,
+            "longitude": 116.4843042,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/clothers_male.png",
-            "rating": 2,
+            "type_icon": "assets/icons/store/food-drink/bread.png",
+            "rating": 3,
+            "price": "人均￥1,600",
             "gallery":
                 [
                     "assets/img/items/3.jpg"
                 ],
-            "color": ""
+            "color": "",
+            "item_specific":
+                {
+                    "menu": "￥122.00",
+                    "offer1": "黑椒牛排",
+                    "offer1_price": "45.00",
+                    "offer2": "烟熏三文鱼",
+                    "offer2_price": "36。00",
+                    "offer3": "欧式煎蛋",
+                    "offer3_price": "12.00"
+                }
         },
         {
             "id": 4,
-            "title": "Saguaro Tavern",
-            "location": "1882 Trainer Avenue",
-            "latitude": 51.539212,
-            "longitude": -0.118403,
+            "title": "Diaoyutai State Guest",
+            "category": "bar_restaurant",
+            "location": "No 2 Fucheng Road",
+            "latitude": 39.9218663,
+            "longitude": 116.3268984,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/shoes.png",
-            "rating": 0,
+            "type_icon": "assets/icons/store/food-drink/bread.png",
+            "rating": 4,
+            "price": "人均￥1,880",
             "gallery":
                 [
                     "assets/img/items/4.jpg"
                 ],
-            "color": ""
+            "color": "",
+            "item_specific":
+                {
+                    "menu": "￥168.00",
+                    "offer1": "黑椒牛排",
+                    "offer1_price": "45.00",
+                    "offer2": "烟熏三文鱼",
+                    "offer2_price": "36。00",
+                    "offer3": "欧式煎蛋",
+                    "offer3_price": "12.00"
+                }
         },
         {
             "id": 5,
-            "title": "Max Five Lounge",
-            "location": "1882 Trainer Avenue",
-            "latitude": 51.522340,
-            "longitude": -0.037894,
+            "title": "北京国贸大酒店79西餐厅",
+            "location": "北京国贸大酒店79层",
+            "category": "bar_restaurant",
+            "latitude": 39.9268408,
+            "longitude": 116.4293372,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/tailor.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
+            "price": "人均￥794",
             "gallery":
                 [
                     "assets/img/items/5.jpg"
                 ],
-            "color": ""
+            "color": "",
+            "item_specific":
+                {
+                    "menu": "￥198.00",
+                    "offer1": "黑椒牛排",
+                    "offer1_price": "45.00",
+                    "offer2": "烟熏三文鱼",
+                    "offer2_price": "36。00",
+                    "offer3": "欧式煎蛋",
+                    "offer3_price": "12.00"
+                }
         },
         {
             "id": 6,
@@ -131,7 +148,7 @@
             "longitude": -0.058837,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/umbrella-2.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 5,
             "gallery":
                 [
@@ -147,7 +164,7 @@
             "longitude": -0.112739,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -163,7 +180,7 @@
             "longitude": -0.128274,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "featured": 0,
             "gallery":
@@ -180,7 +197,7 @@
             "longitude": -0.111365,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -196,7 +213,7 @@
             "longitude": -0.078750,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -212,7 +229,7 @@
             "longitude": -0.036607,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "featured": 0,
             "gallery":
@@ -229,7 +246,7 @@
             "longitude": -0.125012,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -245,7 +262,7 @@
             "longitude": -0.140977,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/apparel/bags.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -261,7 +278,7 @@
             "longitude": -0.070939,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/computers-electronics/computers.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -277,7 +294,7 @@
             "longitude": -0.041842,
             "url": "item-detail.html",
             "type": "Restaurant",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -293,7 +310,7 @@
             "longitude": -0.102321,
             "url": "item-detail.html",
             "type": "Restaurant / Grill & Steak",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -309,7 +326,7 @@
             "longitude": -0.103493,
             "url": "item-detail.html",
             "type": "Restaurant / Grill & Steak",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -325,7 +342,7 @@
             "longitude": -0.051885,
             "url": "item-detail.html",
             "type": "Restaurant / Coffee",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -341,7 +358,7 @@
             "longitude": -0.054545,
             "url": "item-detail.html",
             "type": "Restaurant / Coffee",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -357,7 +374,7 @@
             "longitude": -0.052314,
             "url": "item-detail.html",
             "type": "Restaurant / Grill",
-            "type_icon": "assets/icons/store/computers-electronics/videogames.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -368,14 +385,14 @@
 
         {
             "id": 21,
-            "category": "real_estate",
+            "category": "bar_restaurant",
             "title": "Steak House Restaurant666",
             "location": "63 Birch Street",
             "latitude": 51.530189,
             "longitude": -0.078750,
             "url": "item-detail.html",
             "type": "Apartment",
-            "type_icon": "assets/icons/store/apparel/umbrella-2.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [
@@ -392,14 +409,14 @@
         },
         {
             "id": 22,
-            "category": "real_estate",
+            "category": "bar_restaurant",
             "title": "Another same position",
             "location": "63 Birch Street",
             "latitude": 51.530189,
             "longitude": -0.078750,
             "url": "item-detail.html",
             "type": "Apartment",
-            "type_icon": "assets/icons/store/apparel/umbrella-2.png",
+            "type_icon": "assets/icons/store/food-drink/bread.png",
             "rating": 4,
             "gallery":
                 [

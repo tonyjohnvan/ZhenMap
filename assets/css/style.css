@@ -2411,6 +2411,7 @@ ul.bullets li a:hover {
   position: relative;
   text-align: center;
   vertical-align: middle;
+  padding-right: 20px;
   /*max-width: 100px;*/
 }
 .logos .logo a {
@@ -4389,23 +4390,23 @@ body.map-fullscreen #map {
   text-align: center;
   width: 100%;
 }
-.infobox .inner .image .overlay:hover {
+.infobox .inner .image .overlay.clicked {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.infobox .inner .image .overlay:hover .wrapper hr {
+.infobox .inner .image .overlay .wrapper hr.clicked {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   width: 140px;
 }
-.infobox .inner .image .overlay:hover .wrapper .detail {
+.infobox .inner .image .overlay .wrapper .detail.clicked {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
   -moz-transition-delay: 0.1s;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-.infobox .inner .image .overlay:hover .wrapper .quick-view {
+.infobox .inner .image .overlay .wrapper .quick-view.clicked {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
@@ -6616,6 +6617,7 @@ body.navigation-top-header .header .wrapper .toggle-navigation {
   .logos .logo {
     display: block;
     margin-bottom: 50px;
+
   }
 
   .faq-form .wrapper > button {

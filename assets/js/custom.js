@@ -605,7 +605,7 @@ function drawItemSpecific(category, json, a) {
         else if (category == 'bar_restaurant') {
             if (json.data[a].item_specific) {
                 if (json.data[a].item_specific.menu) {
-                    itemSpecific += '<span>Menu from: ' + json.data[a].item_specific.menu + '</span>';
+                    itemSpecific += '<span>菜品单价: ' + json.data[a].item_specific.menu + ' 起</span>';
                 }
                 return itemSpecific;
             }

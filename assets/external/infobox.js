@@ -25,8 +25,8 @@ function drawInfobox(category, infoboxContent, json, i){
                 '<div class="item-specific">' + drawItemSpecific(category, json, i) + '</div>' +
                 '<div class="overlay">' +
                     '<div class="wrapper">' +
-                        '<a href="#" class="quick-view" data-toggle="modal" data-target="#modal" id="' + id + '">Quick View</a>' +
-                        '<hr>' +
+//                        '<a href="#" class="quick-view" data-toggle="modal" data-target="#modal" id="' + id + '">Quick View</a>' +
+//                        '<hr>' +
                         '<a href="' + url +  '" class="detail">Go to Detail</a>' +
                     '</div>' +
                 '</div>' +

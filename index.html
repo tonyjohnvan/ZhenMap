@@ -284,8 +284,8 @@
 <![endif]-->
 
 <script>
-    var _latitude = 51.541216;
-    var _longitude = -0.095678;
+    var _latitude = 39.941341;
+    var _longitude = 116.45992;
     var jsonPath = 'assets/json/items.json.txt';
 
     // Load JSON data and create Google Maps
@@ -313,6 +313,15 @@
         console.log(e.target);
         $(e.target).prev().toggleClass('clicked');
         $(e.target).toggleClass('clicked')
+    });
+
+    // click on the item (on map):
+    $('#map').delegate('.image','click', function(e){
+        console.log(e.target);
+        $(e.target).toggleClass('clicked');
+        $(e.target).children('.wrapper').children('hr').toggleClass('clicked');
+        $(e.target).children('.wrapper').children('.detail').toggleClass('clicked');
+        $(e.target).children('.wrapper').children('.quick-view').toggleClass('clicked');
     });
 </script>
 
