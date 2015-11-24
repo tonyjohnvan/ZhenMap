@@ -18,6 +18,18 @@
     font-size: 12px;
     font-style: italic;
     color: #676869;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid white;
+    background: white;
+    padding: 15px 15px;
+    /*border-radius: 20px;*/
+    z-index: 1000;
+}
+.more-content{
+    margin-top: -40px;
+    background: white;
+    height: 40px;
 }
 .off-canvas-navigation header{
     padding: 15px 15px;
@@ -26,4 +38,16 @@
 
 #partners{
     padding-bottom: 0px;
+}
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 50px solid white;
+    z-index: 1000;
+    position: absolute;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
 }

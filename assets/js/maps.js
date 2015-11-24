@@ -60,10 +60,10 @@ var mapStyles = [{
 var $body = $('body');
 if ($body.hasClass('map-fullscreen')) {
     if ($(window).width() > 768) {
-        $('.map-canvas').height($(window).height() - $('.header').height() - 60);
+        $('.map-canvas').height($(window).height() - $('.header').height() - 0);
     }
     else {
-        $('.map-canvas #map').height($(window).height() - $('.header').height() - 60);
+        $('.map-canvas #map').height($(window).height() - $('.header').height() - 0);
     }
 }
 
