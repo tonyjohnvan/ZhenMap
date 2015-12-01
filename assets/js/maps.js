@@ -421,7 +421,7 @@ function createHomepageOSM(_latitude, _longitude, json, mapProvider) {
     function osmMap() {
         var map = L.map('map', {
             center: [_latitude, _longitude],
-            zoom: 14,
+            zoom: 13,
             scrollWheelZoom: false
         });
 
