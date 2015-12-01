@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no">
-
-    <title>真地图 - 真格美食囊括其中</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="description" content="真格餐厅，收罗所有真格投资餐厅，最大化方便您的选择。">
 
     <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
@@ -13,13 +13,11 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/jquery.nouislider.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/leaflet.css" type="text/css">
     <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-    <!--<link rel="stylesheet" href="assets/css/colors/" type="text/css">-->
     <link rel="stylesheet" href="assets/css/user.style.css" type="text/css">
 
+    <title>真地图 - 真格美食囊括其中</title>
 
 </head>
 
@@ -60,24 +58,16 @@
             <!--end Off Canvas Navigation-->
             <!--Page Content-->
             <div id="page-content">
-                <!-- Map Canvas-->
-                <div class="map-canvas list-solid">
-                    <!-- Map -->
-                    <div class="map">
-                        <div class="toggle-navigation">
-                            <div class="icon">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                        <!--/.toggle-navigation-->
-                        <div id="map" class="has-parallax"></div>
-                    </div>
-                    <!-- end Map -->
+            <!-- Map Canvas-->
+            <div class="map-canvas list-width-30">
+                <!-- Map -->
+                <div class="map">
+                    <div id="map" class="has-parallax"></div>
+                    <!--/#map-->
                 </div>
-                <!-- end Map Canvas-->
-
+                <!-- end Map -->
+            </div>
+            <!-- end Map Canvas-->
                 <div class="more-content">
                     <!--<div class="arrow-up"></div>--><span class="guide-small-text">下拉查看更多内容</span>
                 </div>
@@ -202,10 +192,11 @@
                     <!--/.container-->
                 </section>
                 <!--end Popular-->
+
                 <!--Partners-->
                 <section id="partners" class="block">
                     <div class="container">
-                        <header><h2>Partners</h2></header>
+                        <header><h2>真格投资餐厅</h2></header>
                         <div class="logos">
                             <div class="logo"><a href="#"><img src="assets/img/logo-partner-01.png" alt=""></a></div>
                             <div class="logo"><a href="#"><img src="assets/img/logo-partner-02.png" alt=""></a></div>
@@ -228,31 +219,31 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 text-center">
-                                <h2>关于真餐厅</h2>
-                                <address>
-                                    <div>真餐厅是真格投资的餐厅</div>
-                                    <div>另外一些简介</div>
-                                    <div>如果想加入请联系</div>
-                                    <figure>
-                                        <div class="info">
-                                            <i class="fa fa-mail-forward"></i>
-                                            <span>media@zhenfund.com</span>
-                                        </div>
-                                        <div class="info">
-                                            <i class="fa fa-globe"></i>
-                                            <a href="www.ZhenFund.com">www.ZhenFund.com</a>
-                                        </div>
-                                        <div class="info">
-                                            <i class="fa fa-users"></i>
-                                            <span>技术支持</span><a href="www.ZhenFund.com"> TonyJohnVan.com</a>
-                                        </div>
-                                    </figure>
-                                </address>
-                                <div class="social">
-                                    <a href="#" class="social-button"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="social-button"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="social-button"><i class="fa fa-pinterest"></i></a>
-                                </div>
+                                    <h2>关于真餐厅</h2>
+                                    <address>
+                                        <div>真餐厅是真格投资的餐厅</div>
+                                        <div>另外一些简介</div>
+                                        <div>如果想加入请联系</div>
+                                        <figure>
+                                            <div class="info">
+                                                <i class="fa fa-mail-forward"></i>
+                                                <span>media@zhenfund.com</span>
+                                            </div>
+                                            <div class="info">
+                                                <i class="fa fa-globe"></i>
+                                                <a href="www.ZhenFund.com">www.ZhenFund.com</a>
+                                            </div>
+                                            <div class="info">
+                                                <i class="fa fa-users"></i>
+                                                <span>技术支持</span><a href="www.ZhenFund.com"> TonyJohnVan.com</a>
+                                            </div>
+                                        </figure>
+                                    </address>
+                                    <div class="social">
+                                        <a href="#" class="social-button"><i class="fa fa-twitter"></i></a>
+                                        <a href="#" class="social-button"><i class="fa fa-facebook"></i></a>
+                                        <a href="#" class="social-button"><i class="fa fa-pinterest"></i></a>
+                                    </div>
                             </div>
                             <!--/.col-md-4-->
                         </div>
@@ -280,35 +271,38 @@
 
 <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="assets/js/before.load.js"></script>
-<script type="text/javascript" src="assets/js/leaflet.js"></script>
-<script type="text/javascript" src="assets/js/leaflet-providers.js"></script>
-<script type="text/javascript" src="assets/js/leaflet.markercluster.js"></script>
 <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="assets/js/icheck.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.hotkeys.js"></script>
 <script type="text/javascript" src="assets/js/jquery.nouislider.all.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+<script type="text/javascript" src="assets/js/infobox.js"></script>
+<script type="text/javascript" src="assets/js/richmarker-compiled.js"></script>
+<script type="text/javascript" src="assets/js/markerclusterer.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <script type="text/javascript" src="assets/js/maps.js"></script>
+
+<!--[if lte IE 9]>
+<script type="text/javascript" src="assets/js/ie-scripts.js"></script>
+<![endif]-->
 
 <script>
     var _latitude = 39.941341;
     var _longitude = 116.45992;
     var jsonPath = 'assets/json/items.json.txt';
-    var mapProvider = 'Acetate.all';
 
-    // Load JSON data and create OSM
+    // Load JSON data and create Google Maps
 
     $.getJSON(jsonPath)
-            .done(function(json) {
-                createHomepageOSM(_latitude,_longitude,json,mapProvider);
-            })
-            .fail(function( jqxhr, textStatus, error ) {
-                console.log(error);
-            })
+        .done(function(json) {
+            createHomepageGoogleMap(_latitude,_longitude,json);
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+            console.log(error);
+        })
     ;
 
     // Set if language is RTL and load Owl Carousel
@@ -316,6 +310,24 @@
     $(window).load(function(){
         var rtl = false; // Use RTL
         initializeOwl(rtl);
+    });
+
+    autoComplete();
+
+    // click on the item:
+    $('.carousel.wide').delegate('.image','click', function(e){
+        console.log(e.target);
+        $(e.target).prev().toggleClass('clicked');
+        $(e.target).toggleClass('clicked')
+    });
+
+    // click on the item (on map):
+    $('#map').delegate('.image','click', function(e){
+        console.log(e.target);
+        $(e.target).toggleClass('clicked');
+        $(e.target).children('.wrapper').children('hr').toggleClass('clicked');
+        $(e.target).children('.wrapper').children('.detail').toggleClass('clicked');
+        $(e.target).children('.wrapper').children('.quick-view').toggleClass('clicked');
     });
 </script>
 
