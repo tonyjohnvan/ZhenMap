@@ -760,7 +760,7 @@ function createHomepageBaiduMap(_latitude, _longitude, json) {
         var opts = {
             width : 295,     // 信息窗口宽度
             height: 280,     // 信息窗口高度
-            offset: new BMap.Size(113, 36)
+            offset: new BMap.Size(113, 34)
         };
         var p = e.target;
         var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
