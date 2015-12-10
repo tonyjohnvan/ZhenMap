@@ -1,60 +1,307 @@
 "use strict";
 var $ = jQuery.noConflict();
 
-var mapStyles = [{
-    "featureType": "road",
-    "elementType": "labels",
-    "stylers": [{"visibility": "simplified"}, {"lightness": 20}]
-}, {
-    "featureType": "administrative.land_parcel",
-    "elementType": "all",
-    "stylers": [{"visibility": "off"}]
-}, {
-    "featureType": "landscape.man_made",
-    "elementType": "all",
-    "stylers": [{"visibility": "on"}]
-}, {
-    "featureType": "transit",
-    "elementType": "all",
-    "stylers": [{"saturation": -100}, {"visibility": "on"}, {"lightness": 10}]
-}, {"featureType": "road.local", "elementType": "all", "stylers": [{"visibility": "on"}]}, {
-    "featureType": "road.local",
-    "elementType": "all",
-    "stylers": [{"visibility": "on"}]
-}, {
-    "featureType": "road.highway",
-    "elementType": "labels",
-    "stylers": [{"visibility": "simplified"}]
-}, {"featureType": "poi", "elementType": "labels", "stylers": [{"visibility": "off"}]}, {
-    "featureType": "road.arterial",
-    "elementType": "labels",
-    "stylers": [{"visibility": "on"}, {"lightness": 50}]
-}, {
-    "featureType": "water",
-    "elementType": "all",
-    "stylers": [{"hue": "#a1cdfc"}, {"saturation": 30}, {"lightness": 49}]
-}, {
-    "featureType": "road.highway",
-    "elementType": "geometry",
-    "stylers": [{"hue": "#f49935"}]
-}, {
-    "featureType": "road.arterial",
-    "elementType": "geometry",
-    "stylers": [{"hue": "#fad959"}]
-}, {
-    featureType: 'road.highway',
-    elementType: 'all',
-    stylers: [{hue: '#dddbd7'}, {saturation: -92}, {lightness: 60}, {visibility: 'on'}]
-}, {
-    featureType: 'landscape.natural',
-    elementType: 'all',
-    stylers: [{hue: '#c8c6c3'}, {saturation: -71}, {lightness: -18}, {visibility: 'on'}]
-}, {
-    featureType: 'poi',
-    elementType: 'all',
-    stylers: [{hue: '#d9d5cd'}, {saturation: -70}, {lightness: 20}, {visibility: 'on'}]
-}];
+var mapStyles = [
+    {
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+            {"visibility": "simplified"},
+            {"lightness": 20}
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "all",
+        "stylers": [
+            {"visibility": "off"}
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
+        "elementType": "all",
+        "stylers": [
+            {"visibility": "on"}
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {"saturation": -100},
+            {"visibility": "on"},
+            {"lightness": 10}
+        ]
+    },
+    {"featureType": "road.local", "elementType": "all", "stylers": [
+        {"visibility": "on"}
+    ]},
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {"visibility": "on"}
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels",
+        "stylers": [
+            {"visibility": "simplified"}
+        ]
+    },
+    {"featureType": "poi", "elementType": "labels", "stylers": [
+        {"visibility": "off"}
+    ]},
+    {
+        "featureType": "road.arterial",
+        "elementType": "labels",
+        "stylers": [
+            {"visibility": "on"},
+            {"lightness": 50}
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {"hue": "#a1cdfc"},
+            {"saturation": 30},
+            {"lightness": 49}
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+            {"hue": "#f49935"}
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {"hue": "#fad959"}
+        ]
+    },
+    {
+        featureType: 'road.highway',
+        elementType: 'all',
+        stylers: [
+            {hue: '#dddbd7'},
+            {saturation: -92},
+            {lightness: 60},
+            {visibility: 'on'}
+        ]
+    },
+    {
+        featureType: 'landscape.natural',
+        elementType: 'all',
+        stylers: [
+            {hue: '#c8c6c3'},
+            {saturation: -71},
+            {lightness: -18},
+            {visibility: 'on'}
+        ]
+    },
+    {
+        featureType: 'poi',
+        elementType: 'all',
+        stylers: [
+            {hue: '#d9d5cd'},
+            {saturation: -70},
+            {lightness: 20},
+            {visibility: 'on'}
+        ]
+    }
+];
 
+var baiduMapStyle = [
+    {
+        "featureType": "land",
+        "elementType": "all",
+        "stylers": {
+            "color": "#c5c2bc"
+        }
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": {
+            "color": "#d9ebff"
+        }
+    },
+    {
+        "featureType": "green",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#e8e8e0"
+        }
+    },
+    {
+        "featureType": "manmade",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#d7d3ca"
+        }
+    },
+    {
+        "featureType": "building",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#d7d3ca"
+        }
+    },
+    {
+        "featureType": "highway",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#d6d4cf",
+            "weight": "0.5"
+        }
+    },
+    {
+        "featureType": "highway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#ffffff",
+            "weight": "0.5"
+        }
+    },
+    {
+        "featureType": "highway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#c5c2bc",
+            "weight": "0.5"
+        }
+    },
+    {
+        "featureType": "arterial",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "color": "#ffffff",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "arterial",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "color": "#c5c2bf",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "arterial",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#cac5bf",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "arterial",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#ffffff",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "local",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#71614d",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "local",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#e0e0dc",
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "local",
+        "elementType": "geometry",
+        "stylers": {
+            "color": "#d7d3ca",
+            "visibility": "off"
+        }
+    },
+    {
+        "featureType": "railway",
+        "elementType": "all",
+        "stylers": {
+            "visibility": "off"
+        }
+    },
+    {
+        "featureType": "subway",
+        "elementType": "geometry.stroke",
+        "stylers": {
+            "weight": "0.7"
+        }
+    },
+    {
+        "featureType": "subway",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#272727"
+        }
+    },
+    {
+        "featureType": "subway",
+        "elementType": "labels.text.stroke",
+        "stylers": {
+            "color": "#e0e0dd"
+        }
+    },
+    {
+        "featureType": "subway",
+        "elementType": "labels.icon",
+        "stylers": {
+            "visibility": "off"
+        }
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": {
+            "hue": "#6fa8dc",
+            "visibility": "off"
+        }
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.text.fill",
+        "stylers": {
+            "color": "#b0a48c"
+        }
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": {}
+    },
+    {
+        "featureType": "land",
+        "elementType": "all",
+        "stylers": {}
+    },
+    {
+        "featureType": "subway",
+        "elementType": "geometry.fill",
+        "stylers": {
+            "weight": "0.9",
+            "lightness": 33,
+            "saturation": -29
+        }
+    }
+]
 // Set map height to 100% ----------------------------------------------------------------------------------------------
 
 var $body = $('body');
@@ -409,6 +656,124 @@ function createHomepageGoogleMap(_latitude, _longitude, json) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BaiduMap - Homepage
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function createHomepageBaiduMap(_latitude, _longitude, json) {
+    var map = new BMap.Map("baiduMap");
+    $.get("assets/external/infobox.js", function () {
+        baiduMap();
+    });
+
+    function baiduMap() {
+        var point = new BMap.Point(_longitude, _latitude);  // 创建点坐标
+        map.centerAndZoom(point, 13);                 // 初始化地图，设置中心点坐标和地图级别
+
+        var top_right_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL});
+//        map.addControl(top_right_navigation);
+
+        map.setMapStyle({
+            styleJson: baiduMapStyle
+        });
+
+        var navigationControl = new BMap.NavigationControl({
+            // 靠左上角位置
+            anchor: BMAP_ANCHOR_TOP_RIGHT,
+            // LARGE类型
+            type: BMAP_NAVIGATION_CONTROL_SMALL,
+            // 启用显示定位
+            enableGeolocation: true
+        });
+
+        map.addControl(navigationControl);
+        // 添加定位控件
+        var geolocationControl = new BMap.GeolocationControl();
+        geolocationControl.addEventListener("locationSuccess", function(e){
+            // 定位成功事件
+            var address = '';
+            address += e.addressComponent.province;
+            address += e.addressComponent.city;
+            address += e.addressComponent.district;
+            address += e.addressComponent.street;
+            address += e.addressComponent.streetNumber;
+            alert("当前定位地址为：" + address);
+        });
+        geolocationControl.addEventListener("locationError",function(e){
+            // 定位失败事件
+            alert(e.message);
+        });
+        map.addControl(geolocationControl);
+
+        // Add marker based on the JSON:
+        for (var i = 0; i < json.data.length; i++) {
+
+            // Create infobox for marker -----------------------------------------------------------------------------------
+
+            var infoboxContent = document.createElement("div");
+            var infoboxOptions = {
+                content: infoboxContent,
+                disableAutoPan: false,
+                pixelOffset: new BMap.Size(-18, -42),
+                zIndex: null,
+                alignBottom: true,
+                boxClass: "infobox",
+                enableEventPropagation: true,
+                closeBoxMargin: "0px 0px -630px 0px",
+                closeBoxURL: "assets/img/close.png",
+                infoBoxClearance: new BMap.Size(1, 1)
+            };
+            // Infobox HTML element ----------------------------------------------------------------------------------------
+
+            var category = json.data[i].category;
+            infoboxContent.innerHTML = drawInfobox(category, infoboxContent, json, i);
+
+            // Create new markers ------------------------------------------------------------------------------------------
+
+
+
+            var pt = new BMap.Point(json.data[i].longitude,json.data[i].latitude);
+//            var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
+            var infoWindow = new BMap.InfoWindow(infoboxContent.innerHTML);
+            var myIcon = new BMap.Icon("assets/img/maptag1.png", new BMap.Size(36,46));
+            var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+            map.addOverlay(marker);
+            addClickHandler(infoboxContent.innerHTML,marker);
+//
+//            marker.addEventListener("click", function(){
+//                this.openInfoWindow(infoWindow);
+//                document.getElementById('infoB'+(i-1)).onload = function (){
+//                    infoWindow.redraw();   //防止在网速较慢，图片未加载时，生成的信息框高度比图片的总高度小，导致图片部分被隐藏
+//                }
+//            });
+
+
+        }
+
+    }
+
+    function addClickHandler(content,marker){
+        marker.addEventListener("click",function(e){
+                openInfo(content,e)}
+        );
+    }
+    function openInfo(content,e){
+        var opts = {
+            width : 295,     // 信息窗口宽度
+            height: 280,     // 信息窗口高度
+            offset: new BMap.Size(113, 36)
+        };
+        var p = e.target;
+        var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+        var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+//        setTimeout(function(){
+//            infoWindow.redraw();
+//        },1000);
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // OpenStreetMap - Homepage
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -645,30 +1010,30 @@ function simpleMap(_latitude, _longitude, draggableMarker) {
 function pushItemsToArray(json, a, category, visibleItemsArray) {
     var itemPrice;
     visibleItemsArray.push(
-        '<li>' +
-        '<div class="item" id="' + json.data[a].id + '">' +
-        '<a href="#" class="image">' +
-        '<div class="inner">' +
-        '<div class="item-specific">' +
-        drawItemSpecific(category, json, a) +
-        '</div>' +
-        '<img src="' + json.data[a].gallery[0] + '" alt="">' +
-        '</div>' +
-        '</a>' +
-        '<div class="wrapper">' +
-        '<a href="#" id="' + json.data[a].id + '"><h3>' + json.data[a].title + '</h3></a>' +
-        '<figure>' + json.data[a].location + '</figure>' +
-        drawPrice(json.data[a].price) +
-        '<div class="info">' +
-        '<div class="type">' +
-        '<i><img src="' + json.data[a].type_icon + '" alt=""></i>' +
-        '<span>' + json.data[a].type + '</span>' +
-        '</div>' +
-        '<div class="rating" data-rating="' + json.data[a].rating + '"></div>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</li>'
+            '<li>' +
+            '<div class="item" id="' + json.data[a].id + '">' +
+            '<a href="#" class="image">' +
+            '<div class="inner">' +
+            '<div class="item-specific">' +
+            drawItemSpecific(category, json, a) +
+            '</div>' +
+            '<img src="' + json.data[a].gallery[0] + '" alt="">' +
+            '</div>' +
+            '</a>' +
+            '<div class="wrapper">' +
+            '<a href="#" id="' + json.data[a].id + '"><h3>' + json.data[a].title + '</h3></a>' +
+            '<figure>' + json.data[a].location + '</figure>' +
+            drawPrice(json.data[a].price) +
+            '<div class="info">' +
+            '<div class="type">' +
+            '<i><img src="' + json.data[a].type_icon + '" alt=""></i>' +
+            '<span>' + json.data[a].type + '</span>' +
+            '</div>' +
+            '<div class="rating" data-rating="' + json.data[a].rating + '"></div>' +
+            '</div>' +
+            '</div>' +
+            '</div>' +
+            '</li>'
     );
 
     function drawPrice(price) {

@@ -23,7 +23,10 @@
     <link rel="stylesheet" href="assets/css/user.style.css" type="text/css">
 
     <!-- Baidu Map -->
-    <script type="text/javascript" name="baidu-tc-cerfication" data-appid="7460136" src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZFxtCMGQKSrXTflLDT7vadNV">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+    </script>
 </head>
 
 <body onunload="" class="map-fullscreen page-homepage navigation-off-canvas" id="page-top">
@@ -67,18 +70,15 @@
                 <div class="map-canvas list-solid">
                     <!-- Map -->
                     <div class="map">
-                        <div class="toggle-navigation">
-                            <div class="icon">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                        </div>
                         <!--/.toggle-navigation-->
-                        <div id="map" class="has-parallax"></div>
+                        <!--<div id="map" class="has-parallax"></div>-->
+                        <div id="baiduMap" class="has-parallax"></div>
                     </div>
+
                     <!-- end Map -->
                 </div>
+
+
                 <!-- end Map Canvas-->
 
                 <div class="more-content">
@@ -298,8 +298,8 @@
 <script type="text/javascript" src="assets/js/maps.js"></script>
 
 <script>
-    var _latitude = 39.941341;
-    var _longitude = 116.45992;
+    var _latitude = 39.9146721;
+    var _longitude = 116.4418769;
     var jsonPath = 'assets/json/items.json.txt';
     var mapProvider = 'Acetate.all';
 
@@ -307,7 +307,7 @@
 
     $.getJSON(jsonPath)
             .done(function(json) {
-                createHomepageOSM(_latitude,_longitude,json,mapProvider);
+                createHomepageBaiduMap(_latitude,_longitude,json);
             })
             .fail(function( jqxhr, textStatus, error ) {
                 console.log(error);
@@ -319,6 +319,7 @@
     $(window).load(function(){
         var rtl = false; // Use RTL
         initializeOwl(rtl);
+        $('#baiduMap').height($(window).height()-69);
     });
 </script>
 
