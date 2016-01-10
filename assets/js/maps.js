@@ -301,7 +301,118 @@ var baiduMapStyle = [
             "saturation": -29
         }
     }
-]
+];
+var baiduMapStyle2 = [
+        {
+            "featureType": "land",
+            "elementType": "all",
+            "stylers": {
+                "color": "#faf6ef"
+            }
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": {
+                "color": "#aaddf3"
+            }
+        },
+        {
+            "featureType": "green",
+            "elementType": "all",
+            "stylers": {
+                "color": "#cee7ae"
+            }
+        },
+        {
+            "featureType": "manmade",
+            "elementType": "all",
+            "stylers": {
+                "color": "#cccccc",
+                "weight": "0.7",
+                "visibility": "off"
+            }
+        },
+        {
+            "featureType": "highway",
+            "elementType": "geometry.fill",
+            "stylers": {
+                "color": "#fcfde1"
+            }
+        },
+        {
+            "featureType": "highway",
+            "elementType": "geometry.stroke",
+            "stylers": {
+                "color": "#f5c560"
+            }
+        },
+        {
+            "featureType": "highway",
+            "elementType": "labels",
+            "stylers": {
+                "visibility": "off"
+            }
+        },
+        {
+            "featureType": "arterial",
+            "elementType": "geometry.fill",
+            "stylers": {
+                "color": "#ffffff"
+            }
+        },
+        {
+            "featureType": "arterial",
+            "elementType": "geometry.stroke",
+            "stylers": {
+                "color": "#cccccc"
+            }
+        },
+        {
+            "featureType": "arterial",
+            "elementType": "labels.text.fill",
+            "stylers": {
+                "color": "#999999",
+                "weight": "0.7"
+            }
+        },
+        {
+            "featureType": "arterial",
+            "elementType": "labels.text.stroke",
+            "stylers": {
+                "color": "#ffffff"
+            }
+        },
+        {
+            "featureType": "local",
+            "elementType": "geometry.fill",
+            "stylers": {
+                "color": "#ffffff"
+            }
+        },
+        {
+            "featureType": "local",
+            "elementType": "geometry.stroke",
+            "stylers": {
+                "color": "#cccccc"
+            }
+        },
+        {
+            "featureType": "railway",
+            "elementType": "all",
+            "stylers": {
+                "visibility": "off"
+            }
+        },
+        {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": {
+                "visibility": "off"
+            }
+        }
+    ];
+
 // Set map height to 100% ----------------------------------------------------------------------------------------------
 
 var $body = $('body');
@@ -673,7 +784,7 @@ function createHomepageBaiduMap(_latitude, _longitude, json) {
 //        map.addControl(top_right_navigation);
 
         map.setMapStyle({
-            styleJson: baiduMapStyle
+            styleJson: baiduMapStyle2
         });
 
         var navigationControl = new BMap.NavigationControl({
@@ -728,9 +839,6 @@ function createHomepageBaiduMap(_latitude, _longitude, json) {
             infoboxContent.innerHTML = drawInfobox(category, infoboxContent, json, i);
 
             // Create new markers ------------------------------------------------------------------------------------------
-
-
-
             var pt = new BMap.Point(json.data[i].longitude,json.data[i].latitude);
 //            var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
             var infoWindow = new BMap.InfoWindow(infoboxContent.innerHTML);
@@ -957,6 +1065,35 @@ function itemDetailMap(json) {
     });
 
     marker.content.className = 'marker-loaded';
+}
+
+
+function itemDetailMapBaidu(json) {
+
+    var map = new BMap.Map("baiduMap");
+    var point = new BMap.Point(json.longitude, json.latitude);
+    map.centerAndZoom(point, 13);
+
+    map.setMapStyle({
+        styleJson: baiduMapStyle2
+    });
+
+    var navigationControl = new BMap.NavigationControl({
+        // 靠左上角位置
+        anchor: BMAP_ANCHOR_TOP_RIGHT,
+        // LARGE类型
+        type: BMAP_NAVIGATION_CONTROL_SMALL,
+        // 启用显示定位
+        enableGeolocation: true
+    });
+
+    var pt = new BMap.Point(json.longitude,json.latitude);
+//            var myIcon = new BMap.Icon("http://developer.baidu.com/map/jsdemo/img/fox.gif", new BMap.Size(300,157));
+    var infoWindow = new BMap.InfoWindow(infoboxContent.innerHTML);
+    var myIcon = new BMap.Icon("assets/img/maptag1.png", new BMap.Size(36,46));
+    var marker = new BMap.Marker(pt,{icon:myIcon});  // 创建标注
+    map.addOverlay(marker);
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

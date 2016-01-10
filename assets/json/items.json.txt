@@ -1,144 +1,137 @@
 {
-    "data": [
-        {
-            "id": 1,
-            "category": "bar_restaurant",
-            "title": "OPERA BOMBANA",
-            "location": "9 Dongdaqiao Rd, Chaoyang",
-            "latitude": 39.919524,
-            "longitude": 116.446436,
-            "url": "item-detail.html",
-            "type": "Restaurant",
-            "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
-            "rating": 5,
-            "price": "人均￥600",
-            "gallery":
-                [
-                    "assets/img/items/1.jpg"
-                ],
-            "color": "",
-            "item_specific":
-                {
-                    "menu": "￥32.00",
-                    "offer1": "黑椒牛排",
-                    "offer1_price": "45.00",
-                    "offer2": "烟熏三文鱼",
-                    "offer2_price": "36。00",
-                    "offer3": "欧式煎蛋",
-                    "offer3_price": "12.00"
-                }
-        },
-        {
-            "id": 2,
-            "category": "bar_restaurant",
-            "title": "China Grill",
-            "location": "66F, Park Hyatt",
-            "latitude": 39.9089829,
-            "longitude": 116.4562528,
-            "url": "item-detail.html",
-            "type": "Restaurant",
-            "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
-            "rating": 5,
-            "price": "人均￥1,200",
-            "gallery":
-                [
-                    "assets/img/items/2.jpg"
-                ],
-            "color": "",
-            "item_specific":
-                {
-                    "menu": "￥92.00",
-                    "offer1": "黑椒牛排",
-                    "offer1_price": "45.00",
-                    "offer2": "烟熏三文鱼",
-                    "offer2_price": "36。00",
-                    "offer3": "欧式煎蛋",
-                    "offer3_price": "12.00"
-                }
-        },
-        {
-            "id": 3,
-            "title": "NOBU Beijing",
-            "category": "bar_restaurant",
-            "location": "JW Marriott Hotel 1F",
-            "latitude": 39.9090724,
-            "longitude": 116.4843042,
-            "url": "item-detail.html",
-            "type": "Restaurant",
-            "type_icon": "assets/icons/store/food-drink/bread.png",
-            "rating": 3,
-            "price": "人均￥1,600",
-            "gallery":
-                [
-                    "assets/img/items/3.jpg"
-                ],
-            "color": "",
-            "item_specific":
-                {
-                    "menu": "￥122.00",
-                    "offer1": "黑椒牛排",
-                    "offer1_price": "45.00",
-                    "offer2": "烟熏三文鱼",
-                    "offer2_price": "36。00",
-                    "offer3": "欧式煎蛋",
-                    "offer3_price": "12.00"
-                }
-        },
-        {
-            "id": 4,
-            "title": "Diaoyutai State Guest",
-            "category": "bar_restaurant",
-            "location": "No 2 Fucheng Road",
-            "latitude": 39.9218663,
-            "longitude": 116.3268984,
-            "url": "item-detail.html",
-            "type": "Restaurant",
-            "type_icon": "assets/icons/store/food-drink/bread.png",
-            "rating": 4,
-            "price": "人均￥1,880",
-            "gallery":
-                [
-                    "assets/img/items/4.jpg"
-                ],
-            "color": "",
-            "item_specific":
-                {
-                    "menu": "￥168.00",
-                    "offer1": "黑椒牛排",
-                    "offer1_price": "45.00",
-                    "offer2": "烟熏三文鱼",
-                    "offer2_price": "36。00",
-                    "offer3": "欧式煎蛋",
-                    "offer3_price": "12.00"
-                }
-        },
-        {
-            "id": 5,
-            "title": "北京国贸大酒店79西餐厅",
-            "location": "北京国贸大酒店79层",
-            "category": "bar_restaurant",
-            "latitude": 39.9268408,
-            "longitude": 116.4293372,
-            "url": "item-detail.html",
-            "type": "Restaurant",
-            "type_icon": "assets/icons/store/food-drink/bread.png",
-            "rating": 4,
-            "price": "人均￥794",
-            "gallery":
-                [
-                    "assets/img/items/5.jpg"
-                ],
-            "color": "",
-            "item_specific":
-                {
-                    "menu": "￥198.00",
-                    "offer1": "黑椒牛排",
-                    "offer1_price": "45.00",
-                    "offer2": "烟熏三文鱼",
-                    "offer2_price": "36。00",
-                    "offer3": "欧式煎蛋",
-                    "offer3_price": "12.00"
-                }
-        }
-    ]
+  "data": [
+    {
+      "id": 1,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "东城区 王府井大街218号 王府井书店B1层",
+      "latitude": 39.916517,
+      "longitude": 116.418343,
+      "url": "item-detail.html#rid=1",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg",
+        "assets/img/items/1.jpg",
+        "assets/img/items/1.jpg",
+        "assets/img/items/1.jpg",
+        "assets/img/items/1.jpg",
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉",
+        "dishDetail":"这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍,这里写这道菜的简单介绍",
+        "dishPrice":"￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价,￥售价",
+        "features":"免费停车,可以刷卡,Wi-Fi,有空调,可以订位,可以团购,有堂食,有电视,有酒吧,有等候区,传统川菜",
+        "openhours":"08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm,08:00 am - 11:00 pm"
+      },
+      "mobile": "(139) 1234 - 1234",
+      "phone": "(010) 234 - 1234",
+      "website": "www.funiutang.com",
+      "description": "Curabitur odio nibh, luctus non pulvinar a, ultricies ac diam. Donec neque massa, viverra interdum eros ut, imperdiet pellentesque mauris. Proin sit amet scelerisque risus. Donec semper semper erat ut mollis. Curabitur suscipit, justo eu dignissim lacinia, ante sapien pharetra duin consectetur eros augue sed ex. Donec a odio rutrum, hendrerit sapien vitae, euismod arcu. Suspendisse potenti. Integer ut diam venenatis, pellentesque felis eget, elementum enim. Suspendisse sit amet massa commodo nulla iaculis fermentum. Integer eget tincidunt est, in imperdiet risus. Morbi sit amet urna purus."
+    },
+    {
+      "id": 2,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "朝阳区 环球金融中心M层美食广场(近渣打大厦)",
+      "latitude": 39.924547,
+      "longitude": 116.466074,
+      "url": "item-detail.html#rid=2",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉"
+      }
+    },
+    {
+      "id": 3,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "朝阳区 朝外大街乙6号 朝外SOHOC座-0172",
+      "latitude": 39.925585,
+      "longitude": 116.461726,
+      "url": "item-detail.html#rid=3",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉"
+      }
+    },
+    {
+      "id": 4,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "朝阳区 北京市朝阳区望京SOHO商业街1028室",
+      "latitude": 40.00208,
+      "longitude": 116.488072,
+      "url": "item-detail.html#rid=4",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉"
+      }
+    },
+    {
+      "id": 5,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "朝阳区 龙湖·长楹天街西区B1层09E室(近地铁6号线常营站F口)",
+      "latitude": 39.931436,
+      "longitude": 116.610279,
+      "url": "item-detail.html#rid=5",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉"
+      }
+    },
+    {
+      "id": 6,
+      "category": "餐厅",
+      "title": "伏牛堂",
+      "location": "朝阳区 广顺北大街16号院2号楼望京华彩国际商业中心101内",
+      "latitude": 40.022161,
+      "longitude": 116.482983,
+      "url": "item-detail.html#rid=6",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "rating": 5,
+      "price": "人均￥30",
+      "gallery": [
+        "assets/img/items/1.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "红烧牛肉粉,麻辣牛肉粉,榨菜肉丝粉,麻辣肉,虎皮蛋,秘制麻辣牛肉干腌,骨汤三鲜粉,麻辣藕,沙拉,秘制麻辣牛肉干腌粉,酸菜粉,张美男私房凉拌粉"
+      }
+    }
+  ]
 }

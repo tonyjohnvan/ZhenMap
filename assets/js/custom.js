@@ -642,6 +642,66 @@ function adaptBackgroundHeight() {
             $(this).children('img').css('height', '100%');
         }
     });
+}
 
+// Update detail page based on JSON ------------------------------------------------------------------------------------
 
+function updateCurrentPageContent(data) {
+    $('#itemCategory').html(data.category);
+    $('#title').html(data.title);
+    $('#locationAll').html(data.location);
+    var location1 = data.location.split(' ')[0];
+    var location2 = data.location.split(' ')[1];
+    var location3 = data.location.split(' ')[2];
+    location1 != undefined ? $('#location1').html(location1) : {};
+    location2 != undefined ? $('#location2').html(location2) : {};
+    location3 != undefined ? $('#location3').html(location3) : {};
+    data.mobile != undefined ? $('#mobile').html(data.mobile) : {};
+    data.phone != undefined ? $('#phone').html(data.phone) : {};
+    data.website != undefined ? $('#website').html(data.website) : {};
+    data.description != undefined ? $('#description').html(data.description) : {};
+    for (var i in data.gallery) {
+        $('#imageSlide').append('<div class="slide"><img src="' + data.gallery[i] + '" data-hash="' + i + '" alt=""></div>')
+        $('#imageThumb').append('<a href="item-detail.html#rid=1#imageSlide" id="thumbnail-' + i + '" class="active"><img src="' + data.gallery[i] + '" alt=""></a>')
+    }
+    var dishes = data.item_specific.menu != undefined ? data.item_specific.menu.split(',') : "";
+    var dishDetail = data.item_specific.dishDetail != undefined ? data.item_specific.dishDetail.split(',') : "";
+    var dishPrice = data.item_specific.dishPrice != undefined ? data.item_specific.dishPrice.split(',') : "";
+    if (dishes != "" && dishDetail != "" && dishPrice != "") {
+        var j = 0;
+        var m = 1;
+        for (var i in dishes) {
+            if (j % 3 == 0) {
+                $('#mainDishes').append('<div class="slide" id="dish-' + m + '"> ' +
+                    '<header> ' +
+                    '<h3><i class="fa fa-calendar"></i>精品菜系</h3> ' +
+                    '</header> ' +
+                    '</div>');
+                m += 1;
+            }
+            j++;
+            $('#dish-' + (m - 1)).append(
+                '<div class="list-item">\
+                    <div class="left">\
+                        <h4>' + dishes[i] + '</h4>\
+                    <figure>'+dishDetail[i]+'\
+                    </figure>\
+                </div>\
+                <div class="right">'+dishPrice[i]+'</div>\
+            </div>')
+            ;
+        }
+    }
+    var features = data.item_specific.features != undefined ? data.item_specific.features.split(',') : "";
+    if (features != "") {
+        for (var i in features) {
+            $('#features').append('<li>' + features[i] + '</li>');
+        }
+    }
+    var openhours = data.item_specific.openhours != undefined ? data.item_specific.openhours.split(',') : "";
+    if (openhours != "") {
+        for (var i in openhours) {
+            $('#oh'+i).append('<li>' + openhours[i] + '</li>');
+        }
+    }
 }
