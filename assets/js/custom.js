@@ -662,19 +662,19 @@ function updateCurrentPageContent(data) {
     data.description != undefined ? $('#description').html(data.description) : {};
     for (var i in data.gallery) {
         $('#imageSlide').append('<div class="slide"><img src="' + data.gallery[i] + '" data-hash="' + i + '" alt=""></div>')
-        $('#imageThumb').append('<a href="item-detail.html#rid=1#imageSlide" id="thumbnail-' + i + '" class="active"><img src="' + data.gallery[i] + '" alt=""></a>')
+        $('#imageThumb').append('<a href="#' + i + '" id="thumbnail-' + i + '" class="active"><img src="' + data.gallery[i] + '" alt=""></a>')
     }
     var dishes = data.item_specific.menu != undefined ? data.item_specific.menu.split(',') : "";
     var dishDetail = data.item_specific.dishDetail != undefined ? data.item_specific.dishDetail.split(',') : "";
     var dishPrice = data.item_specific.dishPrice != undefined ? data.item_specific.dishPrice.split(',') : "";
-    if (dishes != "" && dishDetail != "" && dishPrice != "") {
+    if (dishes != "" && dishPrice != "") {
         var j = 0;
         var m = 1;
         for (var i in dishes) {
             if (j % 3 == 0) {
                 $('#mainDishes').append('<div class="slide" id="dish-' + m + '"> ' +
                     '<header> ' +
-                    '<h3><i class="fa fa-calendar"></i>精品菜系</h3> ' +
+                        //'<h3><i class="fa fa-calendar"></i>精品菜系</h3> ' +
                     '</header> ' +
                     '</div>');
                 m += 1;
@@ -684,10 +684,9 @@ function updateCurrentPageContent(data) {
                 '<div class="list-item">\
                     <div class="left">\
                         <h4>' + dishes[i] + '</h4>\
-                    <figure>'+dishDetail[i]+'\
                     </figure>\
                 </div>\
-                <div class="right">'+dishPrice[i]+'</div>\
+                <div class="right">' + dishPrice[i] + '</div>\
             </div>')
             ;
         }
@@ -699,9 +698,19 @@ function updateCurrentPageContent(data) {
         }
     }
     var openhours = data.item_specific.openhours != undefined ? data.item_specific.openhours.split(',') : "";
+    var oht = $('#openHoursTable');
+    oht.html('');
     if (openhours != "") {
         for (var i in openhours) {
-            $('#oh'+i).append('<li>' + openhours[i] + '</li>');
+            switch(i){
+                case "0":{oht.append('<dt>周一</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "1":{oht.append('<dt>周二</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "2":{oht.append('<dt>周三</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "3":{oht.append('<dt>周四</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "4":{oht.append('<dt>周五</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "5":{oht.append('<dt>周六</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+                case "6":{oht.append('<dt>周日</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+            }
         }
     }
 }

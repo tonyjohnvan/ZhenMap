@@ -2836,7 +2836,7 @@ ul.bullets li a:hover {
     bottom: inherit;
     position: absolute;
     height: 0px;
-    top: 0px;
+    top: -50px;
     right: 0px;
     width: 65px;
 }

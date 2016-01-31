@@ -120,7 +120,7 @@
                                                     <div class="expandable-content height collapsed show-70"
                                                          id="gallery-thumbnails">
                                                         <div class="content" id="imageThumb">
-                                                            <a href="#" id="thumbnail-1" class="active"><img src="assets/img/items/1.jpg" alt=""></a>
+                                                            <!--<a href="#" id="thumbnail-1" class="active"><img src="assets/img/items/1.jpg" alt=""></a>-->
                                                             <!--<a href="#2" id="thumbnail-2"><img src="assets/img/items/2.jpg" alt=""></a>-->
                                                             <!--<a href="#3" id="thumbnail-3"><img src="assets/img/items/3.jpg" alt=""></a>-->
                                                             <!--<a href="#4" id="thumbnail-4"><img src="assets/img/items/4.jpg" alt=""></a>-->
@@ -152,7 +152,7 @@
                                             <!-- /.block -->
                                             <article class="block card">
                                                 <header><h2>营业时间</h2></header>
-                                                <dl class="lines">
+                                                <dl class="lines" id="openHoursTable">
                                                     <dt>周一</dt>
                                                     <dd id="oh1"></dd>
                                                     <dt>周二</dt>
@@ -258,7 +258,7 @@
 <script type="text/javascript" src="assets/js/maps.js"></script>
 
 <script>
-    var itemID = window.location.href.split('#')[1].split('=')[1];
+    var itemID = window.location.href.split('?')[1].split('=')[1].split('#')[0];
     $.getJSON('assets/json/items.json.txt')
             .done(function (json) {
                 $.each(json.data, function (a) {
