@@ -8254,16 +8254,17 @@ body.navigation-top-header .header .wrapper .toggle-navigation {
 .BMap_pop img {
     display: none;
 }
-.mustShow{
+
+.mustShow {
     display: block !important;
 }
 
-.BMap_bubble_content{
+.BMap_bubble_content {
     box-shadow: 0px 4px 2px #c2ba9a;
 }
 
 article.card,
-section.card{
+section.card {
     -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
     -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);
