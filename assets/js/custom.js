@@ -702,15 +702,77 @@ function updateCurrentPageContent(data) {
     oht.html('');
     if (openhours != "") {
         for (var i in openhours) {
-            switch(i){
-                case "0":{oht.append('<dt>周一</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "1":{oht.append('<dt>周二</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "2":{oht.append('<dt>周三</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "3":{oht.append('<dt>周四</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "4":{oht.append('<dt>周五</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "5":{oht.append('<dt>周六</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
-                case "6":{oht.append('<dt>周日</dt><dd id="oh'+i+'">' + openhours[i] + '</dd>');}break;
+            switch (i) {
+                case "0":
+                {
+                    oht.append('<dt>周一</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "1":
+                {
+                    oht.append('<dt>周二</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "2":
+                {
+                    oht.append('<dt>周三</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "3":
+                {
+                    oht.append('<dt>周四</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "4":
+                {
+                    oht.append('<dt>周五</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "5":
+                {
+                    oht.append('<dt>周六</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
+                case "6":
+                {
+                    oht.append('<dt>周日</dt><dd id="oh' + i + '">' + openhours[i] + '</dd>');
+                }
+                    break;
             }
         }
+    }
+}
+
+
+function prefilHomePage(json) {
+    var target = $('#recommendedItems');
+    target.html('');
+    for (var i in json.data) {
+        target.append('<div class="slide">\
+            <div class="inner">\
+            <div class="image">\
+            <img src="' + json.data[i].gallery[0] + '" alt="" id="test1">\
+            </div>\
+            <div class="wrapper">\
+            <a href="' + json.data[i].url + '"><h3>' + json.data[i].title + '</h3></a>\
+        <figure>\
+        <i class="fa fa-map-marker"></i>\
+            <span>' + json.data[i].location + '</span>\
+        </figure>\
+        <div class="info">\
+            <div class="rating" data-rating="' + json.data[i].rating + '">\
+            <aside class="reviews">' + json.data[i].price + '</aside>\
+        </div>\
+        <div class="type">\
+            <i><img src="assets/icons/restaurants-bars/restaurants/restaurant.png"\
+        alt=""></i>\
+            <span>' + json.data[i].category + '</span>\
+            </div>\
+            </div>\
+            <p>' + json.data[i].description + '</p>\
+        <a href="' + json.data[i].url + '" class="read-more icon">了解更多</a>\
+            </div>\
+            </div>\
+            </div>');
     }
 }

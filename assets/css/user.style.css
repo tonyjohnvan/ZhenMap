@@ -4,32 +4,38 @@
 
 #popular h2{
     margin-bottom: 15px;
+    margin-top: 140px;
 }
 
 .carousel.wide{
     margin: 20px 0;
 }
 .guide-small-text{
-    position: absolute;
-    left: 50%;
-    width: 200px;
-    margin-left: -100px;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*width: 200px;*/
+    /*margin-left: -100px;*/
     text-align: center;
     font-size: 12px;
     font-style: italic;
     color: #676869;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 15px solid white;
-    background: white;
-    padding: 15px 15px;
-    /*border-radius: 20px;*/
-    z-index: 1000;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 8px;
+    /*border-left: 15px solid transparent;*/
+    /*border-right: 15px solid transparent;*/
+    /*border-bottom: 15px solid white;*/
+    /*background: white;*/
+    /*padding: 15px 15px;*/
+    /*z-index: 1000;*/
 }
 .more-content{
-    margin-top: -40px;
+    margin-top: -130px;
     background: white;
-    height: 40px;
+    height: 10px;
+    z-index: 10001;
+    position: relative;
 }
 .off-canvas-navigation header{
     padding: 15px 15px;
@@ -50,4 +56,27 @@
     left: 50%;
     margin-top: -40px;
     margin-left: -40px;
+}
+.onlineLogos {
+    top: 30px;
+    text-align: center;
+    background: white;
+    width: 24.5%;
+}
+.onlineLogos li{
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    margin: 5px;
+}
+#onlineLogosItems .owl-controls{
+    display: none;
+}
+
+#onlineLogosItems .owl-item{
+    height: 150px;
+}
+#onlineLogosItems{
+    margin-top: -10px;
+    padding: 0 10px;
 }
