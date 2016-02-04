@@ -80,3 +80,7 @@
     margin-top: -10px;
     padding: 0 10px;
 }
+
+.BMap_noprint.anchorBL{
+    bottom: 140px !important;
+}
