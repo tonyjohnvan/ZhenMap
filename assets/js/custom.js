@@ -743,6 +743,53 @@ function updateCurrentPageContent(data) {
     }
 }
 
+function updateCurrentPageContentOnline(data) {
+    $('#itemCategory').html(data.category);
+    $('#title').html(data.title);
+    data.website != undefined ? $('#website').html(data.website) : {};
+    data.description != undefined ? $('#description').html(data.description) : {};
+    for (var i in data.gallery) {
+        $('#imageSlide').append('<div class="slide"><img src="' + data.gallery[i] + '" data-hash="' + i + '" alt=""></div>')
+        $('#imageThumb').append('<a href="#' + i + '" id="thumbnail-' + i + '" class="active"><img src="' + data.gallery[i] + '" alt=""></a>')
+    }
+    var dishes = data.item_specific.menu != undefined ? data.item_specific.menu.split(',') : "";
+    var dishDetail = data.item_specific.dishDetail != undefined ? data.item_specific.dishDetail.split(',') : "";
+    var dishPrice = data.item_specific.dishPrice != undefined ? data.item_specific.dishPrice.split(',') : "";
+    if (dishes != "" && dishPrice != "") {
+        var j = 0;
+        var m = 1;
+        for (var i in dishes) {
+            if (j % 3 == 0) {
+                $('#mainDishes').append('<div class="slide" id="dish-' + m + '"> ' +
+                    '<header> ' +
+                        //'<h3><i class="fa fa-calendar"></i>精品菜系</h3> ' +
+                    '</header> ' +
+                    '</div>');
+                m += 1;
+            }
+            j++;
+            $('#dish-' + (m - 1)).append(
+                '<div class="list-item">\
+                    <div class="left">\
+                        <h4>' + dishes[i] + '</h4>\
+                    </figure>\
+                </div>\
+                <div class="right">' + dishPrice[i] + '</div>\
+            </div>')
+            ;
+        }
+    }
+    var features = data.item_specific.features != undefined ? data.item_specific.features.split(',') : "";
+    if (features != "") {
+        for (var i in features) {
+            $('#features').append('<li>' + features[i] + '</li>');
+        }
+    }
+    var openhours = data.item_specific.openhours != undefined ? data.item_specific.openhours.split(',') : "";
+    var oht = $('#openHoursTable');
+    oht.html('');
+}
+
 
 function prefilHomePage(json) {
     var target = $('#recommendedItems');

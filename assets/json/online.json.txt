@@ -1,0 +1,217 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "category": "健康餐外卖",
+      "title": "yota",
+      "url": "item-detail.html?rid=1",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/yota/1.jpg",
+        "assets/H5photo/yota/2.jpg",
+        "assets/H5photo/yota/3.jpg",
+        "assets/H5photo/yota/4.jpg",
+        "assets/H5photo/yota/5.jpg",
+        "assets/H5photo/yota/6.jpg",
+        "assets/H5photo/yota/7.jpg",
+        "assets/H5photo/yota/8.jpg",
+        "assets/H5photo/yota/9.jpg",
+        "assets/H5photo/yota/10.jpg",
+        "assets/H5photo/yota/11.jpg",
+        "assets/H5photo/yota/12.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "女士纤体餐,男士健身增肌餐,素食,奢华美味系列(川湘鲁菜),奢华美味系列(淮阳粤闽),家庭餐系列(两人份),家庭餐系列(三人份),家庭餐系列(四人份),糖尿病健康餐,孕餐(孕早期),孕餐(孕中期),孕餐(孕晚期),孕餐(哺乳期),纤悦饮",
+        "dishPrice": "￥38,￥38,￥33,￥38,￥38,￥90,￥115,￥150,￥68,￥48,￥58,￥68,￥68,￥76"
+      },
+      "website": "http://weixin.yotafood.com/",
+      "description": "Yota 综合健康管理平台（悦她（北京）餐饮管理有限公司，以下简称Yota），以期实现用户全方位健康饮食管理体验。Yota业务构成包括健康饮食托管、健康指导、在线医疗、大健康数据管理，以及电商平台、社交平台。目前，O2O在线健康饮食托管服务已经获得相当数目的用户。在医疗健康领域Yota已获得国内权威科研机构、专家深度合作。Yota 旗下健康饮食托管项目——Yota Food精品美食，包括女士纤体餐，男士健身增肌餐，孕妈妈各周期呵护套餐，以及针对高血压、糖尿病等常见病人群推出健康餐，旨在希望三高人群、糖尿病人群在治疗或预防疾病的过程中，品尝健康美味饮食的同时，实现健康管理的目的。"
+    },
+    {
+      "id": 2,
+      "category": "小龙虾外卖",
+      "title": "卷福",
+      "url": "item-detail.html?rid=2",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/juanfu/1.jpg",
+        "assets/H5photo/juanfu/2.jpg",
+        "assets/H5photo/juanfu/3.jpg",
+        "assets/H5photo/juanfu/4.jpg",
+        "assets/H5photo/juanfu/5.jpg",
+        "assets/H5photo/juanfu/6.jpg",
+        "assets/H5photo/juanfu/7.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "张嘉佳私厨秘制小龙虾,卷福加拿大鲜活大龙虾,卷福蟹黄鱼丸,段誉的醉蟹,卷福花雕醉虾",
+        "dishPrice": "￥149,￥199,￥48.8,￥268,￥169"
+      },
+      "website": "http://955.cc/bR24A",
+      "description": "'卷福'是由最会讲故事的作家张嘉佳和他的好基友'褚橙'操盘手蒋政文联合创建的生鲜品牌。"
+    },
+    {
+      "id": 3,
+      "category": "红酒订购",
+      "title": "企鹅团",
+      "url": "item-detail.html?rid=3",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/qietuan/1.jpg",
+        "assets/H5photo/qietuan/2.jpg",
+        "assets/H5photo/qietuan/3.jpg",
+        "assets/H5photo/qietuan/4.jpg",
+        "assets/H5photo/qietuan/5.jpg",
+        "assets/H5photo/qietuan/6.jpg",
+        "assets/H5photo/qietuan/7.jpg",
+        "assets/H5photo/qietuan/8.jpg",
+        "assets/H5photo/qietuan/9.jpg",
+        "assets/H5photo/qietuan/10.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "半年红葡萄酒每月订购,全年红白葡萄酒每月订购,五篓贵腐甜白葡萄酒,马其顿芝麻酱,雷司令之真我丝巾,炸鸡香草包套装",
+        "dishPrice": "￥"
+      },
+      "website": "https://shop121993332.taobao.com/index.htm?spm=a1z10.1-c.w5002-10970056338.2.uxElOw",
+      "description": "企鹅团由'醉鹅娘'王胜寒与'喃猫'张喃喃创办，是一个内容与产品高度结合的美食美酒快消品牌。在产品上，企鹅团提供国内最大的葡萄酒每月订购和大厨级别的食材器具精选。在内容上，企鹅团联合了20 多位吃喝达人，为每种不同吃喝品类打造全面的品味入门知识库『企鹅体系』，在公众号『企鹅和猫』上每天为用户送上最实用的操作视频和最明白的品鉴视频。作为企鹅体系的招牌栏目，《醉鹅红酒日常》与《喃猫料理日常》开播以来流量超过3500 万次。在知乎、微博、微信等社交网站以及优酷土豆等视频网站粉丝积累达到120 万人，粉丝主要以一线城市（北上广）都市白领为主。企鹅团所撰写的关于美食和美酒内容每天也有10 万人次通过各个平台阅读和观看。"
+    },
+    {
+      "id": 4,
+      "category": "鱿鱼电商",
+      "title": "嘻鱿记",
+      "url": "item-detail.html?rid=4",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/xiyouji/1.jpg",
+        "assets/H5photo/xiyouji/2.jpg",
+        "assets/H5photo/xiyouji/3.jpg",
+        "assets/H5photo/xiyouji/4.jpg",
+        "assets/H5photo/xiyouji/5.jpg",
+        "assets/H5photo/xiyouji/6.jpg",
+        "assets/H5photo/xiyouji/7.jpg",
+        "assets/H5photo/xiyouji/8.jpg",
+        "assets/H5photo/xiyouji/9.jpg",
+        "assets/H5photo/xiyouji/10.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "辣辣mini足,麻辣墨鱼小丝,奶香墨鱼小丝,辣味碳烤丝,香辣海鱿须,麻辣小鱿脖,麻辣小鱿条,铁板烧鱿鱼丝,爆辣鱿足,炭烧墨鱼条,铁板烧风琴片,韩味鱿鱼脖,疯味辣皮条,黄金烤足片,香辣海鱿须,麻辣墨鱼小丝,奶香墨鱼小丝,辣辣mini足,辣味碳烤丝,月光宝盒,5+2组合,全家福",
+        "dishPrice": "￥3,￥3,￥3,￥2.5,￥3,￥3,￥3,￥7.9,￥9.9,￥15.8,￥15.8,￥15.8,￥15.8,￥9.9,￥39.8,￥39.8,￥39.8,￥43.8,￥39.8,￥168,￥63.8,￥39.8"
+      },
+      "website": "https://wap.koudaitong.com/v2/showcase/feature?alias=nejlssl",
+      "description": "北京海益投资管理有限公司成立于2014年, 乃连云港海德益食品有限公司旗下分公司. 北京海益投资管理有限公司主要业务为网络电商品牌运营, 在各大电商平台( 淘宝, 天猫, 京东, 一号店等)销售自主品牌嘻鱿记休闲食品和进口休闲食品。北京公司主要为品牌营销和品牌操作。"
+    },
+    {
+      "id": 5,
+      "category": "订购",
+      "title": "企鹅吃喝指南",
+      "url": "item-detail.html?rid=5",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/qie/1.jpg",
+        "assets/H5photo/qie/2.jpg",
+        "assets/H5photo/qie/3.jpg",
+        "assets/H5photo/qie/4.jpg",
+        "assets/H5photo/qie/5.jpg",
+        "assets/H5photo/qie/6.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "葡萄酒每月订购(半年),啤酒每月订购(半年),咖啡每月订购(半年)",
+        "dishPrice": "￥1194,￥1194,￥1194"
+      },
+      "website": "https://wap.koudaitong.com/v2/showcase/feature?alias=nejlssl",
+      "description": "企鹅吃喝指南，国内最具公信力的美食类独立自媒体。专业不高冷，有趣不盲从，为追求品质吃喝的你，带来最有价值的探店报告、食物评测、饮食科普和美食视频。旗下企鹅精选，每周上架零食、咖啡、葡萄酒和精酿啤酒等精品。你在朋友圈可能见过的：300包薯片，我们吃完了！这是你们要的结果，溯源潮汕牛肉火锅：我们去了汕头，只为让你看到潮汕牛肉火锅真正的样子，68碗拉面：Let's Ramen！扫荡上海23店68碗拉面，吃出9碗真爱！。我们还喷过星巴克开扒｜星巴克的美式为什么特别苦？，写过上海的咖啡馆地图上海咖啡地图第一弹，5大区24家，连WiFi密码都帮你查好了！。我们品尝了全家的各款葡萄酒我们把全家扫了一遍，选出了这几瓶葡萄酒｜便利店购酒指南，以及还有最好的精酿啤酒入门文章没试过精酿，别说你喝过真正的啤酒。我们相信吃喝很重要，相信有讲究的吃喝是一件无比幸福的事。因为真的在乎，就有了企鹅。原因很简单，就是想把我们的爱好和追求，分享给更多人：美食、精品咖啡、葡萄酒、精酿啤酒…过去的一年中，我们收获了很多支持和信任，但我们始终希望，企鹅不仅仅停留在纸上谈兵，更能带给你，吃得到、喝得到的幸福感。这一年里，我们的团队也逐渐扩容，聚集了上述领域靠谱、懂行、有热情的一批人，这些人当中，有国内最好的咖啡师，有立志成为葡萄酒大师的葡萄酒达人，有对精酿啤酒了如指掌的业界翘楚…我们无法把好餐厅搬到你家门口，也（暂时）没办法给你送外卖。如果你相信我们，这，是我们现在可以为你做的：每月精选产品定期送货上门你能找到最聪明、最便利的方式喝到最靠谱、最有趣的酒和咖啡"
+    },
+    {
+      "id": 6,
+      "category": "健康果汁",
+      "title": "维果清",
+      "url": "item-detail.html?rid=6",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/weiguoqing/1.jpg",
+        "assets/H5photo/weiguoqing/2.jpg",
+        "assets/H5photo/weiguoqing/3.jpg",
+        "assets/H5photo/weiguoqing/4.jpg",
+        "assets/H5photo/weiguoqing/5.jpg",
+        "assets/H5photo/weiguoqing/6.jpg",
+        "assets/H5photo/weiguoqing/7.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "冷压经典入门套餐(1日6瓶,女士),冷压经典入门套餐(1日6瓶,男士),暖体系列入门套餐(1日6瓶,女士),暖体系列入门套餐(1日8瓶,男士),冷压经典大师套餐(1日6瓶,女士),冷压经典大师套餐(1日8瓶,男士),暖体系列大师套餐(1日6瓶,女士),暖体系列大师套餐(1日8瓶,男士),绿变新生特饮套餐(2瓶奇亚绿，2瓶芳香绿),健康代餐特饮套餐(1瓶经典黑，1瓶甘薯南瓜汤、2瓶奇亚绿),能量满格特饮套餐(2瓶芳香椰子水、2瓶大师清体柠檬水)",
+        "dishPrice": "￥325,￥425,￥325,￥425,￥325,￥425,￥325,￥425,￥225,￥225,￥175"
+      },
+      "website": "",
+      "description": "维果清致力于打造全新的健康饮食风尚。我们严格甄选顶级原料，并通过科学严谨的精心细作，为您奉上焕然一新的健康餐饮。通过我们精心设计的饮食可对健康产生由内而外持久的影响，有益改善体重，促进消化、平衡血压，提振精力、唤醒健康肤色，让您焕发青春光彩！"
+    },
+    {
+      "id": 7,
+      "category": "酸奶电商",
+      "title": "乐纯酸奶",
+      "url": "item-detail.html?rid=7",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/lechun/1.jpg",
+        "assets/H5photo/lechun/2.jpg",
+        "assets/H5photo/lechun/3.jpg",
+        "assets/H5photo/lechun/4.jpg",
+        "assets/H5photo/lechun/5.jpg",
+        "assets/H5photo/lechun/6.jpg",
+        "assets/H5photo/lechun/7.jpg",
+        "assets/H5photo/lechun/8.jpg",
+        "assets/H5photo/lechun/9.jpg",
+        "assets/H5photo/lechun/10.jpg",
+        "assets/H5photo/lechun/11.jpg",
+        "assets/H5photo/lechun/12.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "零售价一盒,六盒装(包邮),包月套餐(包邮)",
+        "dishPrice": "￥15,￥95,￥360"
+      },
+      "website": "http://wechat.fengxuan.co/Goods/cd07778b-3ddc-42e6-8f25-398fb48ac0e5",
+      "description": "作为一家初创公司，'乐纯'是一个由一大群健康的吃货（微博@乐纯的伙伴们 ）一起创造的品牌。我们的产品是非常好吃的无添加酸奶——全部使用最高质量的新鲜奶源和真材实料的纯天然素材制成。"
+    },
+    {
+      "id": 8,
+      "category": "零食电商",
+      "title": "盒事",
+      "url": "item-detail.html?rid=8",
+      "type": "Restaurant",
+      "type_icon": "assets/icons/store/food-drink/japanese-sweet-2.png",
+      "gallery": [
+        "assets/H5photo/heshi/1.jpg",
+        "assets/H5photo/heshi/2.jpg",
+        "assets/H5photo/heshi/3.jpg",
+        "assets/H5photo/heshi/4.jpg",
+        "assets/H5photo/heshi/5.jpg",
+        "assets/H5photo/heshi/6.jpg",
+        "assets/H5photo/heshi/7.jpg",
+        "assets/H5photo/heshi/8.jpg",
+        "assets/H5photo/heshi/9.jpg",
+        "assets/H5photo/heshi/10.jpg",
+        "assets/H5photo/heshi/11.jpg",
+        "assets/H5photo/heshi/12.jpg",
+        "assets/H5photo/heshi/13.jpg"
+      ],
+      "color": "",
+      "item_specific": {
+        "menu": "盒事精品零食礼盒装,爷爷的手工地瓜干,糖雪马蹄,椒盐什锦蔬菜脆片,时间与阳光柿子饼,阳光草莓干,沁甜暖栗,莓果缤纷燕麦曲奇,椰香腰果,花雨曲奇,古法苏派猪肉脯,原香鲜鱿鱼丝",
+        "dishPrice": "￥199,￥25,￥25,￥25,￥30,￥30,￥30,￥30,￥30,￥30,￥35,￥35"
+      },
+      "website": "http://mall.jd.com/index-173765.html",
+      "description": "盒事是真格基金投资的品牌，专注生产格调精致、美味健康的短保质期新鲜零食，给用户最好的零食体验。我们只生产短保质期的优质零食，新鲜美味第一时间送达，最大限度摆脱添加剂和防腐剂的使用。只用最好的原材料，拒绝过度加工，科学降糖降盐，追求食物本来的滋味。盒事拥有由美食意见领袖、国内著名私厨组成的专业研发团队，每月进行品类更新。 包装设计来自国内顶级设计师工作室，风格追求精致前卫。盒事在生产厂家的遴选上极度苛刻，最低准入标准为：企业食品生产许可证（QS），每个品类只选择质量最好的，生产工艺流程安全可控。比如我们的地瓜干供应商，拥有HACCP食品安全体系认证、日本农林水产省有机甘薯/花生/柿认证、EU有机认证、COR有机认证、BRC认证、GLOBAL GAP 良好农业规范认证等，产品只做对日出口，国内仅供货盒事。"
+    }
+  ]
+}

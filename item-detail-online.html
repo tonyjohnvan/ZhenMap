@@ -85,14 +85,6 @@
                                                 <div id="location3"></div>
                                                 <figure>
                                                     <div class="info">
-                                                        <i class="fa fa-mobile"></i>
-                                                        <span id="mobile"></span>
-                                                    </div>
-                                                    <div class="info">
-                                                        <i class="fa fa-phone"></i>
-                                                        <span id="phone"></span>
-                                                    </div>
-                                                    <div class="info">
                                                         <i class="fa fa-globe"></i>
                                                         <a href="#" id="website"></a>
                                                     </div>
@@ -144,32 +136,6 @@
                                                 </div>
                                                 <!-- /.list-slider -->
                                             </article>
-                                            <!-- /.block -->
-                                            <article class="block card">
-                                                <header><h2>餐厅特色</h2></header>
-                                                <ul class="bullets" id="features"></ul>
-                                            </article>
-                                            <!-- /.block -->
-                                            <article class="block card">
-                                                <header><h2>营业时间</h2></header>
-                                                <dl class="lines" id="openHoursTable">
-                                                    <dt>周一</dt>
-                                                    <dd id="oh1"></dd>
-                                                    <dt>周二</dt>
-                                                    <dd id="oh2"></dd>
-                                                    <dt>周三</dt>
-                                                    <dd id="oh3"></dd>
-                                                    <dt>周四</dt>
-                                                    <dd id="oh4"></dd>
-                                                    <dt>周五</dt>
-                                                    <dd id="oh5"></dd>
-                                                    <dt>周六</dt>
-                                                    <dd id="oh6"></dd>
-                                                    <dt>周日</dt>
-                                                    <dd id="oh7"></dd>
-                                                </dl>
-                                            </article>
-                                            <!-- /.block -->
                                         </section>
                                     </div>
                                     <!-- /.col-md-8-->
@@ -259,12 +225,12 @@
 
 <script>
     var itemID = window.location.href.split('?')[1].split('=')[1].split('#')[0];
-    $.getJSON('assets/json/items.json.txt')
+    $.getJSON('assets/json/online.json.txt')
             .done(function (json) {
                 $.each(json.data, function (a) {
                     if (json.data[a].id == itemID) {
                         //itemDetailMapBaidu(json.data[a]);
-                        updateCurrentPageContent(json.data[a]);
+                        updateCurrentPageContentOnline(json.data[a]);
                     }
                 });
             })
