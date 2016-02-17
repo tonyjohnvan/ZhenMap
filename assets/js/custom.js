@@ -791,7 +791,7 @@ function updateCurrentPageContentOnline(data) {
 }
 
 
-function prefilHomePage(json) {
+function prefilHomePageOld(json) {
     var target = $('#recommendedItems');
     target.html('');
     for (var i in json.data) {
@@ -816,10 +816,53 @@ function prefilHomePage(json) {
             <span>' + json.data[i].category + '</span>\
             </div>\
             </div>\
-            <p>' + json.data[i].description + '</p>\
+            <p>' + _substring(json.data[i].description, 510) + '</p>\
         <a href="' + json.data[i].url + '" class="read-more icon">了解更多</a>\
             </div>\
             </div>\
             </div>');
     }
+}
+function prefilHomePage(json) {
+    var target = $('#recommendedItems');
+    target.html('');
+    for (var i in json.data) {
+        target.append('<div class="slide">\
+            <div class="inner">\
+            <div class="image">\
+            <img src="' + json.data[i].gallery[0] + '" alt="" id="test1">\
+            </div>\
+            <div class="wrapper">\
+            <a href="' + json.data[i].url + '"><h3>' + json.data[i].title + '</h3></a>\
+        <figure>\
+        <div class="info">\
+        <div class="type">\
+            <i><img src="assets/icons/restaurants-bars/restaurants/restaurant.png"\
+        alt=""></i>\
+            <span>' + json.data[i].category + '</span>\
+            </div>\
+            </div>\
+            <p>' + _substring(json.data[i].description, 510) + '</p>\
+        <a href="' + json.data[i].url + '" class="read-more icon">了解更多</a>\
+            </div>\
+            </div>\
+            </div>');
+    }
+}
+
+function _substring(str, len) {
+    var vlen = 0, i = 0, extDot = "";
+    for (; i < str.length; i++) {
+        if (vlen >= len) {
+            extDot = "...";
+            break;
+        } else {
+            if (str.charCodeAt(i) < 27 || str.charCodeAt(i) > 126) {
+                vlen += 2;
+            } else {
+                vlen++;
+            }
+        }
+    }
+    return str.substring(0, i) + extDot;
 }

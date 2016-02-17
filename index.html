@@ -209,6 +209,15 @@
     $.getJSON(jsonPath)
             .done(function (json) {
                 createHomepageBaiduMap(_latitude, _longitude, json);
+//                prefilHomePage(json);
+            })
+            .fail(function (jqxhr, textStatus, error) {
+                console.log(error);
+            })
+    ;
+
+    $.getJSON('assets/json/show.json.txt')
+            .done(function (json) {
                 prefilHomePage(json);
             })
             .fail(function (jqxhr, textStatus, error) {
